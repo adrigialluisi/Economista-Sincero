@@ -36,14 +36,14 @@ export const author = {
     '2x Top 03 IBEST',
   ],
   photos: {
-    hero: '/images/charles-hero.jpg',
-    authority: '/images/charles-authority.jpg',
-    closing: '/images/charles-hero.jpg',
+    hero: '/Economista-Sincero/images/charles-hero.jpg',
+    authority: '/Economista-Sincero/images/charles-authority.jpg',
+    closing: '/Economista-Sincero/images/charles-hero.jpg',
   },
 }
 
 export const nav = {
-  logo: '/images/__positivo-icon.png',
+  logo: '/Economista-Sincero/images/__positivo-icon.png',
   ctaText: 'Começar agora',
 }
 
@@ -190,7 +190,7 @@ export const closing = {
 }
 
 export const footer = {
-  logo: '/images/__positivo-icon.png',
+  logo: '/Economista-Sincero/images/__positivo-icon.png',
   links: [
     { label: 'Termos de Uso', href: '#' },
     { label: 'Política de Privacidade', href: '#' },
