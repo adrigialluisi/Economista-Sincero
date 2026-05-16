@@ -1,0 +1,129 @@
+.guarantee {
+  position: relative;
+  background-color: var(--brand-mid);
+  padding-block: var(--spacing-section);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.guarantee::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vw;
+  max-width: 500px;
+  max-height: 500px;
+  background: radial-gradient(circle, rgba(42, 147, 69, 0.1) 0%, transparent 65%);
+  filter: blur(30px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.inner {
+  max-width: 680px;
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Badge — composição visual com camadas */
+.badge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.875rem;
+  color: var(--accent);
+  padding: 1.25rem 2rem;
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(42, 147, 69, 0.22) 0%, transparent 65%);
+  filter: blur(24px);
+  z-index: -1;
+}
+
+.shieldWrap {
+  position: relative;
+  width: 72px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shield {
+  width: 72px;
+  height: 80px;
+  filter: drop-shadow(0 8px 20px rgba(42, 147, 69, 0.35));
+}
+
+.days {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: clamp(3.75rem, 8vw, 5.5rem);
+  color: var(--text-on-dark);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.daysSuffix {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.daysSuffix::before,
+.daysSuffix::after {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+/* Headline */
+.headline {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--text-on-dark);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* Body text */
+.text {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 540px;
+}

@@ -1,0 +1,137 @@
+/* ============================================================
+   TOKENS — P3X / Charles Mendlowicz
+   Para adaptar a novo influencer: editar apenas o bloco MARCA.
+   ============================================================ */
+
+@font-face {
+  font-family: 'TuskerGrotesk';
+  src: url('/fonts/TuskerGrotesk-3700Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TuskerGrotesk';
+  src: url('/fonts/TuskerGrotesk-3600Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TuskerGrotesk';
+  src: url('/fonts/TuskerGrotesk-3500Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima Nova Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima Nova Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima Nova Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima Nova Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* === MARCA — alterar por influencer === */
+  --brand-primary: #2a9345;
+  --brand-dark:    #000000;
+  --brand-mid:     #2d2d2d;
+  --brand-light:   #ffffff;
+
+  --font-headline: 'TuskerGrotesk', sans-serif;
+  --font-body:     'Proxima Nova', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  /* === DERIVADOS — não alterar === */
+  --cta-bg:        var(--brand-primary);
+  --cta-text:      var(--brand-light);
+  --cta-hover:     color-mix(in srgb, var(--brand-primary) 80%, black);
+  --section-dark:  var(--brand-dark);
+  --section-mid:   var(--brand-mid);
+  --section-light: var(--brand-light);
+  --text-on-dark:  var(--brand-light);
+  --text-on-light: var(--brand-dark);
+  --accent:        var(--brand-primary);
+
+  /* === TIPOGRAFIA === */
+  --text-display: clamp(3rem, 8vw, 6.5rem);
+  --text-hero:    clamp(2.75rem, 6.4vw, 5.5rem);
+  --text-h2:      clamp(2rem, 4vw, 3.75rem);
+  --text-h3:      clamp(1.5rem, 3vw, 2.25rem);
+  --text-body-lg: 1.125rem;
+  --text-body:    1rem;
+  --text-small:   0.875rem;
+  --text-eyebrow: 0.8125rem;
+
+  /* === ESPAÇAMENTOS === */
+  --spacing-xs:      0.5rem;
+  --spacing-sm:      1rem;
+  --spacing-md:      2rem;
+  --spacing-lg:      4rem;
+  --spacing-xl:      6rem;
+  --spacing-section: clamp(5rem, 9vw, 9rem);
+
+  /* === GRID === */
+  --container-max: 1200px;
+  --container-wide: 1320px;
+  --container-pad: 1.5rem;
+
+  /* === BORDER RADIUS === */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-pill: 999px;
+
+  /* === BORDAS SUTIS === */
+  --border-subtle:  1px solid rgba(255, 255, 255, 0.08);
+  --border-faint:   1px solid rgba(255, 255, 255, 0.05);
+  --border-accent:  1px solid rgba(42, 147, 69, 0.35);
+  --card-bg:        #0e0e0e;
+  --card-bg-elev:   #131313;
+  --surface-glass:  rgba(255, 255, 255, 0.03);
+
+  /* === SHADOWS === */
+  --shadow-glow-sm: 0 8px 24px rgba(42, 147, 69, 0.18);
+  --shadow-glow-md: 0 16px 48px rgba(42, 147, 69, 0.28);
+  --shadow-glow-lg: 0 24px 80px rgba(42, 147, 69, 0.35);
+  --shadow-card:    0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 24px 60px rgba(0, 0, 0, 0.45);
+  --shadow-elev:    0 30px 80px -20px rgba(0, 0, 0, 0.7);
+
+  /* === GRADIENTES === */
+  --gradient-accent: linear-gradient(135deg, #2a9345 0%, #1e6e33 100%);
+  --gradient-fade-down: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 100%);
+  --gradient-text-fade: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.5) 120%);
+
+  /* === EASINGS === */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:    cubic-bezier(0.45, 0, 0.55, 1);
+}

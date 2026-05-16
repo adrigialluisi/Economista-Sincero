@@ -1,0 +1,246 @@
+.authority {
+  position: relative;
+  background-color: var(--brand-dark);
+  padding-block: var(--spacing-section);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.authority::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50vw;
+  height: 60vw;
+  max-width: 600px;
+  max-height: 700px;
+  background: radial-gradient(circle, rgba(42, 147, 69, 0.08) 0%, transparent 60%);
+  filter: blur(30px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    grid-template-columns: 45fr 55fr;
+    gap: 5rem;
+  }
+}
+
+/* Photo */
+.photoCol {
+  order: 1;
+}
+
+.photoWrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .photoWrap {
+    aspect-ratio: unset;
+    height: clamp(500px, 70vh, 640px);
+  }
+}
+
+.photoWrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(42, 147, 69, 0.18);
+  pointer-events: none;
+}
+
+.photo {
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Fades the right edge into background */
+.gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to left, #000000 0%, transparent 30%),
+    linear-gradient(to top, #000000 0%, transparent 18%);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .gradient {
+    background:
+      linear-gradient(to left, #000000 0%, transparent 28%),
+      linear-gradient(to top, #000000 0%, transparent 14%);
+  }
+}
+
+/* Floating ribbon — destaque ANBIMA */
+.ribbon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(14, 14, 14, 0.92);
+  border: 1px solid rgba(42, 147, 69, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+  z-index: 2;
+}
+
+.ribbonDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Text */
+.textCol {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(to right, var(--accent), transparent);
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: var(--text-h2);
+  line-height: 1.04;
+  color: var(--text-on-dark);
+  letter-spacing: -0.015em;
+}
+
+.title {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: fit-content;
+}
+
+.title::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.bio {
+  font-family: var(--font-body);
+  font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+  line-height: 1.78;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 56ch;
+}
+
+/* Credentials as grid of cards */
+.credentials {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 500px) {
+  .credentials {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.credItem {
+  background: var(--card-bg);
+  border: var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-on-dark);
+  line-height: 1.4;
+  transition: border-color 0.3s var(--ease-out-expo), background 0.3s var(--ease-out-expo);
+}
+
+.credItem:hover {
+  border-color: rgba(42, 147, 69, 0.4);
+  background: var(--card-bg-elev);
+}
+
+.credCheck {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(42, 147, 69, 0.12);
+  border: 1px solid rgba(42, 147, 69, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .credItem { transition: none; }
+}

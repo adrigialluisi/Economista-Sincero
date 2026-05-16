@@ -1,0 +1,167 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  transform: translateY(0);
+  transition: transform 0.4s var(--ease-out-expo),
+              background-color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.navSolid {
+  background-color: rgba(0, 0, 0, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.navHidden {
+  transform: translateY(-110%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+}
+
+.inner {
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.logoLink:hover {
+  opacity: 0.85;
+}
+
+/* Links centrais — opcional, escondidos no mobile */
+.links {
+  display: none;
+  gap: 2.5rem;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 900px) {
+  .links {
+    display: flex;
+  }
+}
+
+.link {
+  font-family: var(--font-body);       /* Proxima Nova em vez de TuskerGrotesk */
+  font-size: 14px;
+  font-weight: 400;                    /* Regular — sem peso excessivo */
+  letter-spacing: 0;                   /* Sem espaçamento forçado */
+  text-transform: none;                /* Sem uppercase */
+  color: #ffffff;                      /* Branco puro — máximo contraste */
+  transition: color 0.2s ease;
+  position: relative;
+  padding-bottom: 4px;                 /* Espaço para a barra abaixo */
+}
+
+/* Barra indicadora — aparece no hover E no estado ativo */
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;                         /* 2px sólido — mais visível que 1px */
+  background: var(--accent);           /* Verde P3X */
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s ease;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Estado ativo — seção visível na viewport */
+.linkActive {
+  font-weight: 500;                    /* Leve reforço de peso no item ativo */
+  color: #ffffff;
+}
+
+.linkActive::after {
+  transform: scaleX(1);               /* Barra sempre visível */
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;                        /* Sem preenchimento */
+  color: var(--brand-primary);                    /* Texto verde */
+  border: 1px solid rgba(42, 147, 69, 0.65);     /* Borda verde semitransparente */
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.15s ease;
+}
+
+.cta:hover {
+  background: var(--brand-primary);              /* Preenche com verde no hover */
+  color: #ffffff;
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+.ctaArrow {
+  transition: transform 0.25s var(--ease-out-expo);
+}
+
+.cta:hover .ctaArrow {
+  transform: translateX(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta,
+  .ctaArrow {
+    transition: background 0.2s ease;
+  }
+
+  .cta:hover,
+  .cta:hover .ctaArrow {
+    transform: none;
+    box-shadow: none;
+  }
+}
