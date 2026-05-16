@@ -47,12 +47,7 @@ export default function Page() {
           heroImage={author.photos.hero}
           authorName={author.name}
         />
-        <Pain
-          headline={pain.headline}
-          narrative={pain.narrative}
-          transition={pain.transition}
-          closing={pain.closing}
-        />
+        <Pain />
         <Solution
           label={solution.label}
           headline={solution.headline}
