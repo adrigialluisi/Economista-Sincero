@@ -122,26 +122,25 @@
   flex-shrink: 0;
 }
 
+/* Eyebrow do Hero — verde uppercase, sem linha decorativa */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1.5;
+}
+
 .headline {
   font-family: var(--font-headline);
   font-size: clamp(2.25rem, 5vw, 4rem);
   line-height: 1.05;
-  color: var(--text-on-dark);
-  letter-spacing: -0.015em;
-}
-
-.headlineRegular {
-  font-weight: 600;
   color: var(--brand-light);
-}
-
-.headlineBold {
+  letter-spacing: -0.015em;
   font-weight: 700;
-  color: var(--accent);
-}
-
-.headlineAccent {
-  color: var(--accent);
+  text-transform: uppercase;
 }
 
 .subheadline {

@@ -32,14 +32,12 @@ export default function Hero({
 
       <div className={styles.inner}>
         <div className={styles.textCol}>
-          <p className={styles.subheadline}>
-            {subheadline}
+          <p className={styles.eyebrow}>
+            {headline}
           </p>
 
           <h1 className={styles.headline}>
-            <span className={styles.headlineRegular}>{headline.split('. ')[0]}.</span>
-            {' '}
-            <span className={styles.headlineBold}>{headline.split('. ')[1]}</span>
+            {subheadline}
           </h1>
 
           <p className={styles.context}>{context}</p>
