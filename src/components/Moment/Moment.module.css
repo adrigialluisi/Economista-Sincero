@@ -50,14 +50,16 @@
 
 /* Eyebrow */
 .eyebrow {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   font-family: var(--font-body);
   font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
   text-transform: uppercase;
   letter-spacing: var(--ls-eyebrow);
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
+  color: var(--brand-primary);
   gap: 0.5rem;
   margin-bottom: 1.125rem;
 }
@@ -70,9 +72,9 @@
   letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
   content: '';
-  width: 16px;
+  width: 48px;
   height: 1px;
-  background: var(--brand-primary);
+  background: linear-gradient(90deg, rgba(42, 147, 69, 0) 0%, var(--brand-primary) 100%);
   display: inline-block;
 }
 
@@ -82,7 +84,7 @@
    Manter em 1.375rem mesmo que pareça pequeno isolado. */
 .headline {
   font-family: var(--font-headline);    /* TuskerGrotesk */
-  font-size: var(--text-body-lg);
+  font-size: 40px;
   font-weight: 700;
   color: #ffffff;
   line-height: var(--lh-body);
@@ -95,8 +97,8 @@
 .narrative {
   font-family: var(--font-body);
   font-weight: var(--fw-body);
-  font-size: var(--text-body);
-  line-height: var(--lh-body);
+  font-size: 16px;
+  line-height: 28px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 1.5rem;
 }
@@ -124,7 +126,7 @@
 
 .quoteText {
   font-family: var(--font-headline);    /* TuskerGrotesk */
-  font-size: var(--text-h3);
+  font-size: 40px;
   font-weight: 700;
   color: var(--brand-primary);
   line-height: var(--lh-body);
@@ -146,10 +148,10 @@
    Tudo na mesma linha, mesmo peso, mesma cor. Não separar em spans. */
 .closingText {
   font-family: var(--font-body);
-  font-size: var(--text-body);
+  font-size: 20px;
   font-weight: 500;
   color: #ffffff;
-  line-height: var(--lh-body);
+  line-height: 32px;
 }
 
 /* ══════════════════════════════════════
@@ -246,3 +248,4 @@
   height: 100%;
   object-fit: cover;
 }
+

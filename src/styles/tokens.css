@@ -91,7 +91,7 @@
   --text-h3:      clamp(1.5rem, 3vw, 2.25rem);
   --text-body:    1rem;        /* 16px  — Body        | Proxima Nova Regular */
   --text-body-lg: 1.125rem;
-  --text-button:  0.875rem;    /* 14px  — Botões      | Proxima Nova Semibold Uppercase */
+  --text-button:  clamp(0.6875rem, 2.5vw, 0.875rem);    /* 11px-14px — Botões | Proxima Nova Semibold Uppercase */
   --text-eyebrow: 0.75rem;     /* 12px  — Labels topo | Proxima Nova Semibold Uppercase */
   --text-caption: 0.75rem;     /* 12px  — Captions    | Proxima Nova Regular */
   --text-small:   0.875rem;

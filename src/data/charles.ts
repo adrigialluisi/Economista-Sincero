@@ -191,7 +191,7 @@ export const closing = {
 }
 
 export const footer = {
-  logo: '/Economista-Sincero/images/__positivo-icon.png',
+  logo: '/Economista-Sincero/images/logo-positivo.png',
   links: [
     { label: 'Termos de Uso', href: '#' },
     { label: 'Política de Privacidade', href: '#' },

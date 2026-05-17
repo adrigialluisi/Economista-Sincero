@@ -101,14 +101,16 @@
 }
 
 .tag {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   font-family: var(--font-body);
   font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
   text-transform: uppercase;
   letter-spacing: var(--ls-eyebrow);
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
+  color: var(--brand-primary);
   gap: 0.75rem;
   width: fit-content;
 }
@@ -122,20 +124,24 @@
   color: var(--accent);
   content: '';
   display: block;
-  width: 28px;
+  width: 48px;
   height: 1px;
-  background: linear-gradient(to right, var(--accent), transparent);
+  background: linear-gradient(90deg, rgba(42, 147, 69, 0) 0%, var(--brand-primary) 100%);
   flex-shrink: 0;
 }
 
 /* Eyebrow do Hero — verde uppercase, sem linha decorativa */
 .eyebrow {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   font-family: var(--font-body);
   font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
   text-transform: uppercase;
   letter-spacing: var(--ls-eyebrow);
-  color: var(--accent);
+  color: var(--brand-primary);
 }
 
 .headline {
@@ -195,6 +201,7 @@
   border-radius: var(--radius-pill);
   cursor: pointer;
   width: 100%;
+  white-space: nowrap;
   position: relative;
   isolation: isolate;
   transition: background 0.25s var(--ease-out-expo),
@@ -464,3 +471,5 @@
     animation: none;
   }
 }
+
+

@@ -64,8 +64,8 @@ export default function FAQ({ items }: FAQProps) {
     <section id="faq" className={styles.faq}>
       <div className={styles.inner}>
         <header className={styles.header}>
-          <span className={styles.eyebrow}>Dúvidas frequentes</span>
-          <h2 className={styles.headline}>Antes de você decidir.</h2>
+          <span className={styles.eyebrow}>FAQ</span>
+          <h2 className={styles.headline}>Perguntas rápidas</h2>
         </header>
         <div className={styles.list}>
           {items.map((item, i) => (

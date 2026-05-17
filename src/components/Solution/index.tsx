@@ -54,7 +54,9 @@ export default function Solution({
       <div className={styles.inner}>
         <header className={styles.header}>
           <span className={styles.label}>{label}</span>
-          <h2 className={styles.headline}>{headline}</h2>
+          <h2 className={styles.headline}>
+            NÃO É <span className={styles.headlineEm}>APENAS</span> UMA <span className={styles.headlineEm}>COMUNIDADE</span>. NÃO É MAIS UM CURSO. NÃO É MAIS UM AGREGADOR.
+          </h2>
           <p className={styles.description}>{description}</p>
         </header>
 
@@ -70,7 +72,10 @@ export default function Solution({
         </div>
 
         <div className={styles.bottomBlock}>
-          <p className={styles.closing}>{closing}</p>
+          <p className={styles.closingText}>
+            E ACIMA DE TUDO, <span className={styles.closingTextEm}>COM O OLHAR E O MÉTODO DO CHARLÃO.</span><br />
+            SEM ENROLAÇÃO E SEM PROMESSA MILAGROSA.
+          </p>
 
           <a href={ctaUrl} className={styles.cta}>
             {ctaText}

@@ -86,11 +86,6 @@ export default function Closing({
               />
             </svg>
           </a>
-
-          <div className={styles.signature}>
-            <span className={styles.sigName}>— {authorName}</span>
-            <span className={styles.sigTitle}>{authorTitle}</span>
-          </div>
         </div>
 
         <div className={styles.photoCol}>

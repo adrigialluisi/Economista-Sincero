@@ -149,23 +149,25 @@ export default function Offer({
           </div>
 
           <div className={styles.card}>
-            <p className={styles.planName}>Assinatura anual P3X</p>
+            <div className={styles.cardHeader}>
+              <p className={styles.planName}>Assinatura anual P3X</p>
 
-            <p className={styles.priceOld}>
-              De <s>{priceList}</s>
-              <span className={styles.priceOldTag}>40% off</span>
-            </p>
+              <p className={styles.priceOld}>
+                De <s>{priceList}</s>
+                <span className={styles.priceOldTag}>40% off</span>
+              </p>
 
-            <div className={styles.priceRow}>
-              <span className={styles.priceCurrencyAcc}>{currencySymbol}</span>
-              <span className={styles.priceAmount}>{priceAmount}</span>
-              <span className={styles.pricePeriod}>,00/{pricePeriod}</span>
+              <div className={styles.priceRow}>
+                <span className={styles.priceCurrencyAcc}>{currencySymbol}</span>
+                <span className={styles.priceAmount}>{priceAmount}</span>
+                <span className={styles.pricePeriod}>,00/{pricePeriod}</span>
+              </div>
+
+              <p className={styles.priceMonthly}>
+                Equivalente a{' '}
+                <strong className={styles.priceMonthlyEm}>{priceMonthly}/mês</strong>
+              </p>
             </div>
-
-            <p className={styles.priceMonthly}>
-              Equivalente a{' '}
-              <strong className={styles.priceMonthlyEm}>{priceMonthly}/mês</strong>
-            </p>
 
             <hr className={styles.divider} />
 

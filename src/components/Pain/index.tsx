@@ -42,7 +42,7 @@ export default function Pain() {
   return (
     <>
       {/* ── Seção principal: 2 colunas ─────────────────── */}
-      <section className={styles.pain} aria-label="O problema">
+      <section id="dor" className={styles.pain} aria-label="O problema">
         <div className={styles.inner}>
 
           {/* Coluna esquerda — headline + pain boxes */}

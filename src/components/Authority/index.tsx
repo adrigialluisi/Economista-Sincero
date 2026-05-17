@@ -31,10 +31,9 @@ export default function Authority({ name, title, bioFull, credentials, photo }: 
         </div>
 
         <div className={styles.textCol}>
-          <span className={styles.eyebrow}>Quem está por trás</span>
+          <span className={styles.eyebrow}>Economista Sincero</span>
           <div className={styles.nameBlock}>
             <h2 className={styles.name}>{name}</h2>
-            <p className={styles.title}>{title}</p>
           </div>
           <p className={styles.bio}>{bioFull}</p>
           <ul className={styles.credentials} aria-label="Credenciais">

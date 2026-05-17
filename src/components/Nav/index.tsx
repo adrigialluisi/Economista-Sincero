@@ -13,7 +13,7 @@ interface NavProps {
 }
 
 // IDs das seções que os links de âncora apontam
-const NAV_SECTIONS = ['solucao', 'autoridade', 'oferta', 'faq']
+const NAV_SECTIONS = ['dor', 'solucao', 'momento', 'autoridade', 'prova-social', 'oferta', 'faq']
 
 export default function Nav({ logoTop, logoScrolled, logoAlt = 'P3X', ctaText, ctaUrl }: NavProps) {
   const [hidden, setHidden] = useState(false)
@@ -81,7 +81,7 @@ export default function Nav({ logoTop, logoScrolled, logoAlt = 'P3X', ctaText, c
         {/* Logo — height aumentado de 48px para 56px */}
         <a href="/" className={styles.logoLink} aria-label="P3X — Página inicial">
           <img
-            src={solid ? logoScrolled : logoTop}
+            src={logoScrolled}
             alt={logoAlt}
             className={styles.logoImg}
           />
@@ -90,16 +90,34 @@ export default function Nav({ logoTop, logoScrolled, logoAlt = 'P3X', ctaText, c
         {/* Links de navegação — recebem classe .linkActive quando a seção está visível */}
         <nav className={styles.links} aria-label="Navegação principal">
           <a
+            href="#dor"
+            className={`${styles.link}${activeSection === 'dor' ? ` ${styles.linkActive}` : ''}`}
+          >
+            O Ponto Cego
+          </a>
+          <a
             href="#solucao"
             className={`${styles.link}${activeSection === 'solucao' ? ` ${styles.linkActive}` : ''}`}
           >
-            O ecossistema
+            Ecossistema
+          </a>
+          <a
+            href="#momento"
+            className={`${styles.link}${activeSection === 'momento' ? ` ${styles.linkActive}` : ''}`}
+          >
+            A Plataforma
           </a>
           <a
             href="#autoridade"
             className={`${styles.link}${activeSection === 'autoridade' ? ` ${styles.linkActive}` : ''}`}
           >
             Charles
+          </a>
+          <a
+            href="#prova-social"
+            className={`${styles.link}${activeSection === 'prova-social' ? ` ${styles.linkActive}` : ''}`}
+          >
+            Depoimentos
           </a>
           <a
             href="#oferta"
@@ -111,7 +129,7 @@ export default function Nav({ logoTop, logoScrolled, logoAlt = 'P3X', ctaText, c
             href="#faq"
             className={`${styles.link}${activeSection === 'faq' ? ` ${styles.linkActive}` : ''}`}
           >
-            Dúvidas
+            FAQ
           </a>
         </nav>
 

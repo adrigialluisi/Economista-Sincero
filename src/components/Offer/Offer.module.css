@@ -61,14 +61,16 @@
 }
 
 .eyebrow {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   font-family: var(--font-body);
   font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
   text-transform: uppercase;
   letter-spacing: var(--ls-eyebrow);
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
+  color: var(--brand-primary);
   gap: 0.5rem;
   margin-bottom: 1.125rem;
 }
@@ -81,9 +83,9 @@
   letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
   content: '';
-  width: 16px;
+  width: 48px;
   height: 1px;
-  background: var(--brand-primary);
+  background: linear-gradient(90deg, rgba(42, 147, 69, 0) 0%, var(--brand-primary) 100%);
   display: inline-block;
 }
 
@@ -181,6 +183,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 @media (min-width: 900px) {
@@ -194,9 +197,13 @@
 /* IMPORTANTE: nunca mover o badge para dentro do card com position:absolute.
    O bug anterior era causado por transform:translate(-50%,-50%) dentro de overflow:hidden. */
 .badgeWrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-bottom: 0.875rem;
-  width: 100%;
+  z-index: 2;
+  white-space: nowrap;
 }
 
 .badge {
@@ -222,7 +229,15 @@
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
-  /* SEM overflow:hidden — conteúdo nunca corta */
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
 }
 
 .planName {
@@ -285,9 +300,9 @@
 /* 597 em branco puro — SEM background-clip (causava bug) */
 .priceAmount {
   font-family: var(--font-headline);
-  font-size: var(--text-hero);
+  font-size: 72px;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--brand-primary);
   line-height: var(--lh-body);
   letter-spacing: -0.03em;
 }
@@ -296,9 +311,9 @@
 .pricePeriod {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--brand-primary);
   align-self: flex-end;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .priceMonthly {
@@ -372,6 +387,7 @@
   padding: 1rem 1.5rem;
   border-radius: var(--radius-pill);
   width: 100%;
+  white-space: nowrap;
   margin-top: 0.375rem;
   transition: background 0.2s ease, transform 0.15s ease;
   cursor: pointer;
@@ -424,3 +440,4 @@
   color: var(--brand-primary);
   font-weight: 500;
 }
+

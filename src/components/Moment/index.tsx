@@ -10,7 +10,7 @@ interface MomentProps {
 
 export default function Moment({ headline, narrative, quote, closing, videoSrc }: MomentProps) {
   return (
-    <section className={styles.moment} aria-label="O momento que muda tudo">
+    <section id="momento" className={styles.moment} aria-label="O momento que muda tudo">
       <div className={styles.inner}>
 
         {/* ── Coluna esquerda — texto ── */}
@@ -21,8 +21,6 @@ export default function Moment({ headline, narrative, quote, closing, videoSrc }
             <h2 className={styles.headline}>{headline}</h2>
 
             <p className={styles.narrative}>{narrative}</p>
-
-            <p className={styles.leadin}>Você olha para a tela e pensa:</p>
 
             <blockquote className={styles.quoteBlock}>
               <span className={styles.quoteText}>{quote}</span>

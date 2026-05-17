@@ -27,10 +27,10 @@ function initials(name: string) {
 
 export default function SocialProof({ testimonials, stats }: SocialProofProps) {
   return (
-    <section className={styles.section}>
+    <section id="prova-social" className={styles.section}>
       <div className={styles.inner}>
         <header className={styles.header}>
-          <span className={styles.eyebrow}>Quem já está dentro</span>
+          <span className={styles.eyebrow}>Depoimentos</span>
           <h2 className={styles.headline}>
             Investidores que pararam de operar no escuro.
           </h2>

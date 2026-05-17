@@ -22,9 +22,9 @@ export default function Footer({ logo, logoAlt = 'P3X', links, copyright }: Foot
             <Image
               src={logo}
               alt={logoAlt}
-              width={140}
-              height={56}
-              style={{ height: '44px', width: 'auto' }}
+              width={260}
+              height={64}
+              style={{ objectFit: 'contain', objectPosition: 'left center', width: '260px', height: 'auto', display: 'block' }}
             />
             <p className={styles.tagline}>
               Onde informação vira decisão e decisão vira renda.

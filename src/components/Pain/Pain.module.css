@@ -38,14 +38,16 @@
 }
 
 .eyebrow {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   font-family: var(--font-body);
   font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
   text-transform: uppercase;
   letter-spacing: var(--ls-eyebrow);
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
+  color: var(--brand-primary);
   gap: 0.5rem;
 }
 
@@ -57,9 +59,9 @@
   letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
   content: '';
-  width: 16px;
+  width: 48px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(90deg, rgba(42, 147, 69, 0) 0%, var(--brand-primary) 100%);
   display: inline-block;
 }
 
@@ -251,3 +253,4 @@
   color: var(--brand-primary);
   letter-spacing: -0.01em;
 }
+
