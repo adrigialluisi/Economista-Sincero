@@ -17,7 +17,7 @@
 
 @media (min-width: 900px) {
   .inner {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 55fr 45fr;
     gap: 0;
     align-items: start;
   }
@@ -124,15 +124,13 @@
 .colRight {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.375rem;
 }
 
 @media (min-width: 900px) {
   .colRight {
     padding-left: 3rem;
-    /* Alinhamento vertical com a coluna esquerda */
-    padding-top: 3.75rem; /* compensa eyebrow + headline */
   }
 }
 
@@ -194,9 +192,9 @@
   background-attachment: fixed;   ← parallax no desktop
 */
 .transition {
-  background-image: url('/Economista-Sincero/images/pain-transition.png');
+  background-image: url('/Economista-Sincero/images/worried_man_bw.png');
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
   background-attachment: fixed;
 }
 
@@ -238,16 +236,18 @@
 
 .transSmall {
   font-family: var(--font-body);
-  font-size: var(--text-h2);
-  color: rgba(255, 255, 255, 0.5);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
   line-height: var(--lh-body);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .transBig {
-  font-family: var(--font-body);
+  font-family: var(--font-headline);
+  font-weight: var(--fw-headline);
   font-size: var(--text-h2);
-  font-weight: 600;
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--brand-primary);
-  line-height: var(--lh-body);
   letter-spacing: -0.01em;
 }

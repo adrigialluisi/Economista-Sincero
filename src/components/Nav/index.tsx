@@ -5,7 +5,8 @@ import Image from 'next/image'
 import styles from './Nav.module.css'
 
 interface NavProps {
-  logo: string
+  logoTop: string
+  logoScrolled: string
   logoAlt?: string
   ctaText: string
   ctaUrl: string
@@ -14,7 +15,7 @@ interface NavProps {
 // IDs das seções que os links de âncora apontam
 const NAV_SECTIONS = ['solucao', 'autoridade', 'oferta', 'faq']
 
-export default function Nav({ logo, logoAlt = 'P3X', ctaText, ctaUrl }: NavProps) {
+export default function Nav({ logoTop, logoScrolled, logoAlt = 'P3X', ctaText, ctaUrl }: NavProps) {
   const [hidden, setHidden] = useState(false)
   const [solid, setSolid] = useState(false)
   const [lastY, setLastY] = useState(0)
@@ -79,13 +80,10 @@ export default function Nav({ logo, logoAlt = 'P3X', ctaText, ctaUrl }: NavProps
       <div className={styles.inner}>
         {/* Logo — height aumentado de 48px para 56px */}
         <a href="/" className={styles.logoLink} aria-label="P3X — Página inicial">
-          <Image
-            src={logo}
+          <img
+            src={solid ? logoScrolled : logoTop}
             alt={logoAlt}
-            width={140}
-            height={60}
-            priority
-            style={{ height: '56px', width: 'auto' }}
+            className={styles.logoImg}
           />
         </a>
 

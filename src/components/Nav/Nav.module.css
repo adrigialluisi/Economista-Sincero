@@ -35,10 +35,11 @@
   max-width: var(--container-wide);
   margin-inline: auto;
   padding-inline: var(--container-pad);
-  height: 72px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: height 0.4s var(--ease-out-expo);
 }
 
 .logoLink {
@@ -50,6 +51,17 @@
 
 .logoLink:hover {
   opacity: 0.85;
+}
+
+.logoImg {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.4s var(--ease-out-expo);
+}
+
+.navSolid .logoImg {
+  height: 36px;
 }
 
 /* Links centrais — opcional, escondidos no mobile */

@@ -65,14 +65,12 @@ export default function Pain() {
 
           {/* Coluna direita — revelação emocional */}
           <div className={styles.colRight}>
-            <p className={styles.revealPre}>
-              Isso não é descuido. Não é falta de esforço.
-            </p>
             <span className={styles.revealDivider} aria-hidden="true" />
             <p className={styles.revealLine}>Não é falta de inteligência.</p>
             <p className={styles.revealLine}>Não é falta de dinheiro.</p>
             <p className={styles.revealGreen}>
-              É falta de um lugar onde tudo faça sentido junto.
+              É falta de um lugar onde<br/>
+              tudo faça sentido junto.
             </p>
           </div>
 

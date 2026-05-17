@@ -31,7 +31,8 @@ export default function Page() {
   return (
     <>
       <Nav
-        logo={nav.logo}
+        logoTop={nav.logoTop}
+        logoScrolled={nav.logoScrolled}
         ctaText={nav.ctaText}
         ctaUrl={platform.checkoutUrl}
       />

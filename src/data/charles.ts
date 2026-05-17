@@ -43,7 +43,8 @@ export const author = {
 }
 
 export const nav = {
-  logo: '/Economista-Sincero/images/__positivo-icon.png',
+  logoTop: '/Economista-Sincero/images/logo-positivo.png',
+  logoScrolled: '/Economista-Sincero/images/__positivo-icon.png',
   ctaText: 'Começar agora',
 }
 
