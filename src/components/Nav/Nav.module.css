@@ -69,11 +69,11 @@
 }
 
 .link {
-  font-family: var(--font-body);       /* Proxima Nova em vez de TuskerGrotesk */
-  font-size: 14px;
-  font-weight: 400;                    /* Regular — sem peso excessivo */
-  letter-spacing: 0;                   /* Sem espaçamento forçado */
-  text-transform: none;                /* Sem uppercase */
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   color: #ffffff;                      /* Branco puro — máximo contraste */
   transition: color 0.2s ease;
   position: relative;
@@ -82,6 +82,11 @@
 
 /* Barra indicadora — aparece no hover E no estado ativo */
 .link::after {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   content: '';
   position: absolute;
   left: 0;
@@ -95,10 +100,20 @@
 }
 
 .link:hover {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   color: #ffffff;
 }
 
 .link:hover::after {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   transform: scaleX(1);
 }
 
@@ -113,17 +128,17 @@
 }
 
 .cta {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   background: transparent;                        /* Sem preenchimento */
   color: var(--brand-primary);                    /* Texto verde */
   border: 1px solid rgba(42, 147, 69, 0.65);     /* Borda verde semitransparente */
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
   padding: 0.5rem 1.25rem;
   border-radius: var(--radius-pill);
   cursor: pointer;
@@ -135,6 +150,11 @@
 }
 
 .cta:hover {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   background: var(--brand-primary);              /* Preenche com verde no hover */
   color: #ffffff;
   border-color: var(--brand-primary);
@@ -142,6 +162,11 @@
 }
 
 .cta:active {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   transform: translateY(0);
 }
 
@@ -150,17 +175,32 @@
 }
 
 .cta:hover .ctaArrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   transform: translateX(2px);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .cta,
   .ctaArrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
     transition: background 0.2s ease;
   }
 
   .cta:hover,
   .cta:hover .ctaArrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
     transform: none;
     box-shadow: none;
   }

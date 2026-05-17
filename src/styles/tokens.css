@@ -80,15 +80,35 @@
   --text-on-light: var(--brand-dark);
   --accent:        var(--brand-primary);
 
-  /* === TIPOGRAFIA === */
-  --text-display: clamp(3rem, 8vw, 6.5rem);
-  --text-hero:    clamp(2.75rem, 6.4vw, 5.5rem);
-  --text-h2:      clamp(2rem, 4vw, 3.75rem);
+  /* === TIPOGRAFIA ===
+     Fonte da verdade — alterar aqui reflete em toda a LP.
+     TuskerGrotesk "3600" = série 3, peso Semibold (font-weight: 600).
+  */
+
+  /* Tamanhos */
+  --text-hero:    3rem;        /* 48px  — H1 Hero     | TuskerGrotesk 3600 Uppercase */
+  --text-h2:      2.5rem;      /* 40px  — H2 Seções   | TuskerGrotesk 3600 Uppercase */
   --text-h3:      clamp(1.5rem, 3vw, 2.25rem);
+  --text-body:    1rem;        /* 16px  — Body        | Proxima Nova Regular */
   --text-body-lg: 1.125rem;
-  --text-body:    1rem;
+  --text-button:  0.875rem;    /* 14px  — Botões      | Proxima Nova Semibold Uppercase */
+  --text-eyebrow: 0.75rem;     /* 12px  — Labels topo | Proxima Nova Semibold Uppercase */
+  --text-caption: 0.75rem;     /* 12px  — Captions    | Proxima Nova Regular */
   --text-small:   0.875rem;
-  --text-eyebrow: 0.8125rem;
+
+  /* Line heights */
+  --lh-hero:    70px;          /* H1 Hero */
+  --lh-h2:      56px;          /* H2 Seções */
+  --lh-body:    1.75;          /* Body → 28px em 16px */
+
+  /* Letter spacing */
+  --ls-eyebrow: 0.02em;        /* 2% — Labels acima dos títulos */
+  --ls-button:  0.07em;        /* Botões */
+
+  /* Font weights utilizados */
+  --fw-headline: 600;          /* TuskerGrotesk 3600 = Semibold */
+  --fw-body:     400;          /* Proxima Nova Regular */
+  --fw-semibold: 600;          /* Proxima Nova Semibold — eyebrow, botões */
 
   /* === ESPAÇAMENTOS === */
   --spacing-xs:      0.5rem;

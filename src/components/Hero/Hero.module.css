@@ -101,19 +101,25 @@
 }
 
 .tag {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: var(--font-body);
-  font-size: var(--text-eyebrow);
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
   width: fit-content;
 }
 
 .tag::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
   content: '';
   display: block;
   width: 28px;
@@ -125,29 +131,27 @@
 /* Eyebrow do Hero — verde uppercase, sem linha decorativa */
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
   text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
-  line-height: 1.5;
 }
 
 .headline {
   font-family: var(--font-headline);
-  font-size: clamp(2.25rem, 5vw, 4rem);
-  line-height: 1.05;
-  color: var(--brand-light);
-  letter-spacing: -0.015em;
-  font-weight: 700;
+  font-weight: var(--fw-headline);
+  font-size: var(--text-hero);
+  line-height: var(--lh-hero);
   text-transform: uppercase;
+  color: var(--brand-light);
 }
 
 .subheadline {
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.78);
   max-width: none;
   white-space: nowrap;
@@ -160,8 +164,9 @@
 
 .context {
   font-family: var(--font-body);
+  font-weight: var(--fw-body);
   font-size: var(--text-body);
-  line-height: 1.75;
+  line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.5);
   max-width: 54ch;
 }
@@ -175,17 +180,17 @@
 }
 
 .ctaBtn {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
   background: var(--cta-bg);
   color: var(--cta-text);
-  font-family: var(--font-headline);
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
   padding: 1.125rem 2.25rem;
   border-radius: var(--radius-pill);
   cursor: pointer;
@@ -198,6 +203,11 @@
 }
 
 .ctaBtn::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   content: '';
   position: absolute;
   inset: -4px;
@@ -209,16 +219,31 @@
 }
 
 .ctaBtn:hover {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   background: var(--cta-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow-md);
 }
 
 .ctaBtn:hover::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   opacity: 1;
 }
 
 .ctaBtn:active {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   transform: translateY(0);
 }
 
@@ -227,11 +252,21 @@
 }
 
 .ctaBtn:hover .ctaArrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   transform: translateX(3px);
 }
 
 @media (min-width: 768px) {
   .ctaBtn {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
     width: auto;
     align-self: flex-start;
   }
@@ -240,10 +275,20 @@
 @media (prefers-reduced-motion: reduce) {
   .ctaBtn,
   .ctaArrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
     transition: background 0.2s ease;
   }
   .ctaBtn:hover,
   .ctaBtn:hover .ctaArrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
     transform: none;
     box-shadow: none;
   }
@@ -251,14 +296,17 @@
 
 .microcopy {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-weight: var(--fw-body);
+  font-size: var(--text-caption);
   color: rgba(255, 255, 255, 0.4);
-  line-height: 1.55;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .microcopy {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-caption);
     text-align: left;
   }
 }
@@ -282,13 +330,13 @@
 }
 
 .trustItem {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-caption);
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
   color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.01em;
 }
 
 .trustIcon {
@@ -399,17 +447,15 @@
 
 .fcTop {
   font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-weight: var(--fw-body);
+  font-size: var(--text-caption);
   color: rgba(255, 255, 255, 0.55);
 }
 
 .fcBottom {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 500;
+  font-weight: var(--fw-body);
+  font-size: var(--text-caption);
   color: var(--text-on-dark);
 }
 

@@ -106,7 +106,7 @@
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-body);
-  font-size: 0.6875rem;
+  font-size: var(--text-caption);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -131,10 +131,10 @@
 
 .eyebrow {
   font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
-  font-weight: 600;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
   display: inline-flex;
   align-items: center;
@@ -143,6 +143,12 @@
 }
 
 .eyebrow::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
   content: '';
   width: 28px;
   height: 1px;
@@ -157,20 +163,20 @@
 
 .name {
   font-family: var(--font-headline);
-  font-weight: 700;
-  font-size: var(--text-h2);
-  line-height: 1.04;
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h3);
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--text-on-dark);
-  letter-spacing: -0.015em;
 }
 
 .title {
   font-family: var(--font-headline);
-  font-weight: 700;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--accent);
-  letter-spacing: 0.02em;
-  text-transform: lowercase;
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
@@ -178,6 +184,11 @@
 }
 
 .title::before {
+  font-family: var(--font-headline);
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   content: '';
   width: 28px;
   height: 2px;
@@ -187,8 +198,9 @@
 
 .bio {
   font-family: var(--font-body);
-  font-size: clamp(1.0625rem, 2vw, 1.1875rem);
-  line-height: 1.78;
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.7);
   max-width: 56ch;
 }
@@ -216,10 +228,10 @@
   align-items: center;
   gap: 0.875rem;
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: var(--text-body);
   font-weight: 500;
   color: var(--text-on-dark);
-  line-height: 1.4;
+  line-height: var(--lh-body);
   transition: border-color 0.3s var(--ease-out-expo), background 0.3s var(--ease-out-expo);
 }
 

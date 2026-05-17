@@ -51,11 +51,11 @@
 /* Eyebrow */
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
   text-transform: uppercase;
-  color: var(--brand-primary);
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -63,6 +63,12 @@
 }
 
 .eyebrow::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
   content: '';
   width: 16px;
   height: 1px;
@@ -76,10 +82,10 @@
    Manter em 1.375rem mesmo que pareça pequeno isolado. */
 .headline {
   font-family: var(--font-headline);    /* TuskerGrotesk */
-  font-size: 1.375rem;
+  font-size: var(--text-body-lg);
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.12;
+  line-height: var(--lh-body);
   letter-spacing: -0.005em;
   text-transform: uppercase;
   margin-bottom: 1.625rem;
@@ -88,18 +94,19 @@
 /* Narrativa */
 .narrative {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.6);
-  line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
 /* Lead-in */
 .leadin {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: var(--text-small);
   color: rgba(255, 255, 255, 0.35);
-  line-height: 1.6;
+  line-height: var(--lh-body);
   margin-bottom: 1.25rem;
   font-style: normal;
 }
@@ -117,10 +124,10 @@
 
 .quoteText {
   font-family: var(--font-headline);    /* TuskerGrotesk */
-  font-size: 1.625rem;
+  font-size: var(--text-h3);
   font-weight: 700;
   color: var(--brand-primary);
-  line-height: 1.1;
+  line-height: var(--lh-body);
   letter-spacing: -0.01em;
   text-transform: uppercase;
   display: block;
@@ -139,10 +146,10 @@
    Tudo na mesma linha, mesmo peso, mesma cor. Não separar em spans. */
 .closingText {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: var(--text-body);
   font-weight: 500;
   color: #ffffff;
-  line-height: 1.7;
+  line-height: var(--lh-body);
 }
 
 /* ══════════════════════════════════════
@@ -213,7 +220,7 @@
 
 .videoLabel {
   font-family: var(--font-body);
-  font-size: 0.6875rem;
+  font-size: var(--text-caption);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -224,7 +231,7 @@
 
 .videoSub {
   font-family: var(--font-body);
-  font-size: 0.625rem;
+  font-size: var(--text-caption);
   color: rgba(42, 147, 69, 0.35);
   position: relative;
   z-index: 1;

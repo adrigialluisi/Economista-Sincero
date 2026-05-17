@@ -92,22 +92,57 @@ font-family: 'Proxima Nova', 'Inter', 'Helvetica Neue', Arial, sans-serif;
 | Semibold (600) | Destaques inline, badges |
 | Bold (700) | Labels de CTA, microcopy de destaque |
 
-### Escala Tipográfica (LP)
+### Escala Tipográfica (LP) — Especificação Definitiva
+
+| Elemento | Fonte | Peso | Tamanho | Line Height | Letter Spacing | Cor |
+|---|---|---|---|---|---|---|
+| **Eyebrow** (acima dos títulos) | Proxima Nova | Semibold 600 | 12px | — | 2% (0.02em) | Verde `#2A9345` |
+| **H1 — Hero** | TuskerGrotesk 3600 | Semibold 600 | 48px | 70px | — | Branco |
+| **H2 — Títulos de seção** | TuskerGrotesk 3600 | Semibold 600 | 40px | 56px | — | Branco ou Preto |
+| **Body text** | Proxima Nova | Regular 400 | 16px | 28px | — | Branco |
+| **Texto de botão** | Proxima Nova | Semibold 600 | 14px | — | — | Uppercase |
+| **Caption** | Proxima Nova | Regular 400 | 12px | — | — | Branco |
+
+> **Nota TuskerGrotesk:** "3600" = série 3 (condensed), peso Semibold → `font-weight: 600` no CSS.
+> Todos os textos TuskerGrotesk devem ter `text-transform: uppercase`.
 
 ```css
 :root {
-  /* === TIPOGRAFIA — variáveis fixas === */
+  /* === TIPOGRAFIA — tokens definitivos === */
   --font-headline: 'TuskerGrotesk', sans-serif;
-  --font-body: 'Proxima Nova', 'Inter', sans-serif;
+  --font-body:     'Proxima Nova', 'Inter', sans-serif;
 
-  --text-hero: clamp(2.5rem, 6vw, 5rem);      /* H1 hero */
-  --text-h2: clamp(2rem, 4vw, 3.5rem);         /* Títulos de seção */
-  --text-h3: clamp(1.5rem, 3vw, 2.25rem);      /* Subtítulos */
-  --text-body-lg: 1.125rem;                     /* Corpo grande */
-  --text-body: 1rem;                            /* Corpo padrão */
-  --text-small: 0.875rem;                       /* Microcopy */
+  /* Tamanhos */
+  --text-hero:    3rem;      /* 48px — H1 Hero */
+  --text-h2:      2.5rem;    /* 40px — H2 Seções */
+  --text-body:    1rem;      /* 16px — Body */
+  --text-button:  0.875rem;  /* 14px — Botões */
+  --text-eyebrow: 0.75rem;   /* 12px — Labels acima dos títulos */
+  --text-caption: 0.75rem;   /* 12px — Captions */
+
+  /* Line heights */
+  --lh-hero: 70px;
+  --lh-h2:   56px;
+  --lh-body: 1.75;           /* = 28px em 16px */
+
+  /* Letter spacing */
+  --ls-eyebrow: 0.02em;      /* 2% — obrigatório nos eyebrows */
+  --ls-button:  0.07em;
+
+  /* Font weights */
+  --fw-headline: 600;        /* TuskerGrotesk 3600 Semibold */
+  --fw-body:     400;        /* Proxima Nova Regular */
+  --fw-semibold: 600;        /* Proxima Nova Semibold — eyebrow e botões */
 }
 ```
+
+### Regras de Aplicação
+
+- **Eyebrow:** sempre `text-transform: uppercase`, `letter-spacing: var(--ls-eyebrow)`, `color: var(--accent)`
+- **H1/H2:** sempre `text-transform: uppercase`, `font-weight: var(--fw-headline)`, `font-family: var(--font-headline)`
+- **Body:** `line-height: var(--lh-body)` em todo parágrafo de texto corrido
+- **Botões:** `text-transform: uppercase`, `font-weight: var(--fw-semibold)`, `font-size: var(--text-button)`
+- **Caption:** `font-size: var(--text-caption)`, `color: rgba(255,255,255,0.55)` em fundos escuros
 
 ---
 

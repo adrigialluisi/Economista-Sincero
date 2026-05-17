@@ -39,9 +39,9 @@
 
 .tagline {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: var(--text-small);
   color: rgba(255, 255, 255, 0.38);
-  line-height: 1.6;
+  line-height: var(--lh-body);
 }
 
 .nav {
@@ -52,16 +52,26 @@
 
 .link {
   font-family: var(--font-body);
-  font-size: var(--text-small);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.5);
   transition: color 0.2s ease;
 }
 
 .link:hover {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   color: var(--text-on-dark);
 }
 
 .link:focus-visible {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   outline: 2px solid var(--brand-primary);
   outline-offset: 2px;
   border-radius: 2px;
@@ -85,14 +95,14 @@
 
 .copyright {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-weight: var(--fw-body);
+  font-size: var(--text-caption);
   color: rgba(255, 255, 255, 0.28);
-  letter-spacing: 0.02em;
 }
 
 .disclaimer {
   font-family: var(--font-body);
-  font-size: 0.6875rem;
+  font-size: var(--text-caption);
   color: rgba(255, 255, 255, 0.32);
   letter-spacing: 0.08em;
   text-transform: uppercase;

@@ -1,4 +1,8 @@
 .closing {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   position: relative;
   background-color: var(--brand-dark);
   padding-block: var(--spacing-section);
@@ -7,6 +11,10 @@
 }
 
 .closing::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   content: '';
   position: absolute;
   bottom: -20%;
@@ -54,10 +62,10 @@
 
 .eyebrow {
   font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
-  font-weight: 600;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
   display: inline-flex;
   align-items: center;
@@ -66,6 +74,12 @@
 }
 
 .eyebrow::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
   content: '';
   width: 28px;
   height: 1px;
@@ -74,11 +88,11 @@
 
 .headline {
   font-family: var(--font-headline);
-  font-weight: 700;
+  font-weight: var(--fw-headline);
   font-size: var(--text-h2);
-  line-height: 1.04;
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--text-on-dark);
-  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
@@ -90,12 +104,13 @@
 }
 
 .path {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   position: relative;
   padding: 1.25rem 1.25rem 1.25rem 3.25rem;
   border-radius: var(--radius-md);
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.0625rem);
-  line-height: 1.75;
 }
 
 .pathIcon {
@@ -135,6 +150,10 @@
 
 /* Summary strip */
 .summary {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -149,7 +168,7 @@
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: var(--text-small);
   font-weight: 600;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.78);
@@ -163,17 +182,17 @@
 
 /* CTA */
 .cta {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
   background: var(--cta-bg);
   color: var(--cta-text);
-  font-family: var(--font-headline);
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
   padding: 1.25rem 2.25rem;
   border-radius: var(--radius-pill);
   cursor: pointer;
@@ -186,6 +205,11 @@
 }
 
 .cta::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   content: '';
   position: absolute;
   inset: -4px;
@@ -197,26 +221,61 @@
 }
 
 .cta:hover {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
   background: var(--cta-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow-lg);
 }
-.cta:hover::before { opacity: 1; }
-.cta:active { transform: translateY(0); }
+.cta:hover::before {  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
+ opacity: 1; }
+.cta:active {  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
+ transform: translateY(0); }
 
 .ctaArrow { transition: transform 0.25s var(--ease-out-expo); }
-.cta:hover .ctaArrow { transform: translateX(3px); }
+.cta:hover .ctaArrow {  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
+ transform: translateX(3px); }
 
 @media (min-width: 768px) {
   .cta {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
     width: auto;
     align-self: flex-start;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cta, .ctaArrow { transition: background 0.2s ease; }
-  .cta:hover, .cta:hover .ctaArrow { transform: none; box-shadow: none; }
+  .cta, .ctaArrow {  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
+ transition: background 0.2s ease; }
+  .cta:hover, .cta:hover .ctaArrow {  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
+ transform: none; box-shadow: none; }
 }
 
 /* Signature */
@@ -230,7 +289,7 @@
 .sigName {
   font-family: var(--font-headline);
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   color: var(--text-on-dark);
   letter-spacing: -0.005em;
 }

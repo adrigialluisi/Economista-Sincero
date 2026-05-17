@@ -38,10 +38,10 @@
 
 .eyebrow {
   font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
-  font-weight: 600;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
   display: inline-flex;
   align-items: center;
@@ -50,6 +50,12 @@
 }
 
 .eyebrow::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
   content: '';
   width: 28px;
   height: 1px;
@@ -58,11 +64,11 @@
 
 .headline {
   font-family: var(--font-headline);
-  font-weight: 700;
+  font-weight: var(--fw-headline);
   font-size: var(--text-h2);
-  line-height: 1.04;
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--text-on-dark);
-  letter-spacing: -0.015em;
 }
 
 .list {
@@ -123,11 +129,12 @@
 }
 
 .question {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  font-weight: 500;
+  font-family: var(--font-headline);
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h3);
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--text-on-dark);
-  line-height: 1.4;
   flex: 1;
   transition: color 0.2s ease;
 }
@@ -176,8 +183,9 @@
 
 .answer {
   font-family: var(--font-body);
-  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
-  line-height: 1.78;
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.66);
   padding: 0 1.5rem 1.875rem 1.5rem;
   max-width: 64ch;
@@ -185,6 +193,10 @@
 
 @media (min-width: 600px) {
   .answer {
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
     padding-inline: 1.75rem;
   }
 }

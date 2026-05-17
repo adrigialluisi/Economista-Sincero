@@ -38,10 +38,10 @@
 
 .eyebrow {
   font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
-  font-weight: 600;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
   display: inline-flex;
   align-items: center;
@@ -49,6 +49,12 @@
 }
 
 .eyebrow::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
   content: '';
   width: 28px;
   height: 1px;
@@ -57,11 +63,11 @@
 
 .headline {
   font-family: var(--font-headline);
-  font-weight: 700;
+  font-weight: var(--fw-headline);
   font-size: var(--text-h2);
-  line-height: 1.04;
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--text-on-dark);
-  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
@@ -97,18 +103,19 @@
 
 .quoteChar {
   font-family: var(--font-headline);
-  font-size: 3rem;
+  font-size: var(--text-hero);
   color: var(--accent);
   opacity: 0.45;
-  line-height: 0.7;
+  line-height: var(--lh-body);
   display: block;
   user-select: none;
 }
 
 .text {
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.78);
   flex: 1;
   font-style: italic;
@@ -134,7 +141,7 @@
   justify-content: center;
   font-family: var(--font-headline);
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: var(--text-small);
   color: var(--text-on-dark);
   letter-spacing: 0.04em;
   flex-shrink: 0;
@@ -149,7 +156,7 @@
 
 .authorName {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: var(--text-body);
   font-weight: 600;
   color: var(--text-on-dark);
 }
@@ -204,11 +211,11 @@
 
 .statValue {
   font-family: var(--font-headline);
-  font-weight: 800;
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--text-on-dark);
-  letter-spacing: -0.025em;
-  line-height: 1;
   background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.65) 110%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -217,9 +224,9 @@
 
 .statLabel {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-weight: var(--fw-body);
+  font-size: var(--text-caption);
   color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 0.03em;
   max-width: 22ch;
 }
 

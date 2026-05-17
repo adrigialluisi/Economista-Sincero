@@ -35,10 +35,10 @@
 
 .eyebrow {
   font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
   font-size: var(--text-eyebrow);
-  font-weight: 600;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
   color: var(--accent);
 }
 
@@ -79,16 +79,16 @@
 
 .days {
   font-family: var(--font-headline);
-  font-weight: 800;
-  font-size: clamp(3.75rem, 8vw, 5.5rem);
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--text-on-dark);
-  line-height: 1;
-  letter-spacing: -0.04em;
 }
 
 .daysSuffix {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: var(--text-caption);
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -111,19 +111,20 @@
 /* Headline */
 .headline {
   font-family: var(--font-headline);
-  font-weight: 700;
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  line-height: 1.1;
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--text-on-dark);
-  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
 /* Body text */
 .text {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  line-height: 1.8;
+  font-weight: var(--fw-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.72);
   max-width: 540px;
 }
