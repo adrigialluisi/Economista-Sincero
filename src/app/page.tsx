@@ -16,6 +16,7 @@ import {
 
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
+import VideoHero from '@/components/VideoHero'
 import Pain from '@/components/Pain'
 import Solution from '@/components/Solution'
 import Moment from '@/components/Moment'
@@ -48,6 +49,7 @@ export default function Page() {
           heroImage={author.photos.hero}
           authorName={author.name}
         />
+        <VideoHero />
         <Pain 
           headline={pain.headline}
           narrative={pain.narrative}
