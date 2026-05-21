@@ -133,27 +133,32 @@ export default function Nav({ logoTop, logoScrolled, logoAlt = 'P3X', ctaText, c
           </a>
         </nav>
 
-        {/* CTA — estilo outline */}
-        <a href={ctaUrl} className={styles.cta}>
-          {ctaText}
-          <svg
-            className={styles.ctaArrow}
-            width="14"
-            height="14"
-            viewBox="0 0 14 14"
-            fill="none"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path
-              d="M2 7h10M8 3l4 4-4 4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </a>
+        {/* CTA e Login */}
+        <div className={styles.actions}>
+          <a href="#" className={styles.loginLink}>
+            Entrar
+          </a>
+          <a href={ctaUrl} className={styles.cta}>
+            {ctaText}
+            <svg
+              className={styles.ctaArrow}
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M2 7h10M8 3l4 4-4 4"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </header>
   )

@@ -2,22 +2,27 @@ import Image from 'next/image'
 import styles from './Guarantee.module.css'
 
 interface GuaranteeProps {
-  days: number
+  headline: string
+  subheadline: string
   text: string
+  photo: string
 }
 
-export default function Guarantee({ text }: GuaranteeProps) {
+export default function Guarantee({ headline, subheadline, text, photo }: GuaranteeProps) {
   return (
     <section className={styles.guarantee}>
       <div className={styles.inner}>
         <div className={styles.content}>
-          <span className={styles.eyebrow}>Garantia incondicional</span>
-          <h2 className={styles.headline}>O risco é nosso. Não o seu.</h2>
-          <p className={styles.text}>{text}</p>
+          <span className={styles.eyebrow}>{subheadline}</span>
+          <h2 className={styles.headline}>{headline}</h2>
+          <p className={styles.text}>
+            Entre, conecte sua B3 e teste a plataforma.<br />
+            Se não fizer sentido pra você, devolvemos 100%. Sem burocracia.
+          </p>
         </div>
         <div className={styles.imageCol}>
           <Image
-            src="/Economista-Sincero/images/charles-6.jpg"
+            src="/Economista-Sincero/images/charles-7.jpg"
             alt="Charles"
             fill
             className={styles.image}

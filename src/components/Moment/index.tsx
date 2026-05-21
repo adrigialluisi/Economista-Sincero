@@ -2,13 +2,14 @@ import styles from './Moment.module.css'
 
 interface MomentProps {
   headline: string
-  narrative: string
-  quote: string
+  narrative: string[]
+  bullets: string[]
   closing: string
+  closingBold: string
   videoSrc?: string  // opcional — quando o vídeo chegar
 }
 
-export default function Moment({ headline, narrative, quote, closing, videoSrc }: MomentProps) {
+export default function Moment({ headline, narrative, bullets, closing, closingBold, videoSrc }: MomentProps) {
   return (
     <section id="momento" className={styles.moment} aria-label="O momento que muda tudo">
       <div className={styles.inner}>
@@ -20,15 +21,29 @@ export default function Moment({ headline, narrative, quote, closing, videoSrc }
 
             <h2 className={styles.headline}>{headline}</h2>
 
-            <p className={styles.narrative}>{narrative}</p>
+            <div className={styles.narrative} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
+              {narrative.map((line, i) => (
+                <p key={i} style={{ fontSize: '1.25rem', opacity: 0.9 }}>{line}</p>
+              ))}
+            </div>
 
-            <blockquote className={styles.quoteBlock}>
-              <span className={styles.quoteText}>{quote}</span>
-            </blockquote>
+            <ul style={{ listStyle: 'none', paddingLeft: 0, margin: '0 0 2rem 0', fontSize: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
+              {bullets.map((bullet, i) => (
+                <li key={i} style={{ opacity: 0.8, display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '2px' }}>
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className={styles.closingBlock}>
-            <p className={styles.closingText}>{closing}</p>
+          <div className={styles.closingBlock} style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
+            <p className={styles.closingText} style={{ fontSize: '1.5rem' }}>
+              {closing}
+              <strong style={{ color: 'var(--color-primary, #2A9345)' }}>{closingBold}</strong>
+            </p>
           </div>
         </div>
 

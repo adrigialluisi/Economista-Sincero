@@ -4,29 +4,10 @@
   font-size: var(--text-body);
   line-height: var(--lh-body);
   position: relative;
-  background-color: var(--brand-dark);
+  background-color: #060A14;
   padding-block: var(--spacing-section);
   overflow: hidden;
   isolation: isolate;
-}
-
-.closing::before {
-  font-family: var(--font-body);
-  font-weight: var(--fw-body);
-  font-size: var(--text-body);
-  line-height: var(--lh-body);
-  content: '';
-  position: absolute;
-  bottom: -20%;
-  right: -10%;
-  width: 60vw;
-  height: 60vw;
-  max-width: 700px;
-  max-height: 700px;
-  background: radial-gradient(circle, rgba(42, 147, 69, 0.12) 0%, transparent 65%);
-  filter: blur(40px);
-  pointer-events: none;
-  z-index: -1;
 }
 
 .inner {
@@ -89,6 +70,7 @@
 }
 
 .headline {
+  letter-spacing: var(--ls-headline);
   font-family: var(--font-headline);
   font-weight: var(--fw-headline);
   font-size: var(--text-h2);
@@ -348,8 +330,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, #000000 0%, transparent 28%),
-    linear-gradient(to top, #000000 0%, transparent 18%);
+    linear-gradient(to right, #060A14 0%, transparent 28%),
+    linear-gradient(to top, #060A14 0%, transparent 18%);
   pointer-events: none;
   user-select: none;
 }
@@ -357,8 +339,8 @@
 @media (min-width: 768px) {
   .gradient {
     background:
-      linear-gradient(to right, #000000 0%, transparent 22%),
-      linear-gradient(to top, #000000 0%, transparent 12%);
+      linear-gradient(to right, #060A14 0%, transparent 22%),
+      linear-gradient(to top, #060A14 0%, transparent 12%);
   }
 }
 

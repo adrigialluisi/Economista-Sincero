@@ -2,10 +2,13 @@ import Image from 'next/image'
 import styles from './Hero.module.css'
 
 interface HeroProps {
-  tag: string
   headline: string
-  subheadline: string
-  context: string
+  subheadline: {
+    before: string
+    highlight: string
+  }
+  checklist: string[]
+  checklistHighlight: string
   ctaText: string
   ctaMicrocopy: string
   ctaUrl: string
@@ -14,17 +17,16 @@ interface HeroProps {
 }
 
 export default function Hero({
-  tag,
   headline,
   subheadline,
-  context,
+  checklist,
+  checklistHighlight,
   ctaText,
   ctaMicrocopy,
   ctaUrl,
   heroImage,
   authorName,
 }: HeroProps) {
-  // A subheadline agora é exibida de forma direta
   return (
     <section className={styles.hero} aria-label="Apresentação P3X">
       <div className={styles.glow} aria-hidden="true" />
@@ -37,10 +39,28 @@ export default function Hero({
           </p>
 
           <h1 className={styles.headline}>
-            {subheadline}
+            {subheadline.before.split('\n').map((line, i) => (
+              <span key={i} style={{ display: 'block' }}>{line}</span>
+            ))}
+            <span style={{ display: 'block', color: 'var(--brand-primary)' }}>
+              {subheadline.highlight}
+            </span>
           </h1>
 
-          <p className={styles.context}>{context}</p>
+          {/* New Checklist Block */}
+          <div className={styles.checklistBlock} style={{ marginBottom: '2rem' }}>
+            <ul className={styles.checklist} style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0' }}>
+              {checklist.map((item, idx) => (
+                <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontSize: '1.125rem' }}>
+                  <span aria-hidden="true" style={{ color: 'var(--color-primary, #2A9345)' }}>✔</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className={styles.checklistHighlight} style={{ fontWeight: 'bold', fontSize: '1rem', letterSpacing: '0.05em' }}>
+              {checklistHighlight}
+            </p>
+          </div>
 
           <div className={styles.ctaBlock}>
             <a href={ctaUrl} className={styles.ctaBtn}>
@@ -65,55 +85,18 @@ export default function Hero({
             </a>
             <p className={styles.microcopy}>{ctaMicrocopy}</p>
           </div>
-
-          <ul className={styles.trust} aria-label="Garantias de confiança">
-            <li className={styles.trustItem}>
-              <svg
-                className={styles.trustIcon}
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path d="M8 1L2 3.5v4.2c0 3.4 2.4 6.5 6 7.3 3.6-.8 6-3.9 6-7.3V3.5L8 1z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
-                <path d="M5.5 8l2 2 3.5-3.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              Integração oficial B3
-            </li>
-            <li className={styles.trustItem}>
-              <svg
-                className={styles.trustIcon}
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-              >
-                <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.3"/>
-                <path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              Sem custódia dos ativos
-            </li>
-            <li className={styles.trustItem}>
-              <svg
-                className={styles.trustIcon}
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-              >
-                <rect x="2" y="3" width="12" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.3"/>
-                <path d="M2 6h12M5 9.5h3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-              </svg>
-              Cancele quando quiser
-            </li>
-          </ul>
         </div>
 
         <div className={styles.imageCol}>
           <div className={styles.imageWrapper}>
+            <Image
+              src="/Economista-Sincero/images/hero.jpeg"
+              alt={authorName}
+              fill
+              priority
+              sizes="(max-width: 767px) 100vw, 45vw"
+              className={styles.photo}
+            />
             <div className={styles.imageGradient} aria-hidden="true" />
           </div>
         </div>

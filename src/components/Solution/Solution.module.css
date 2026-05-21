@@ -75,6 +75,7 @@
 }
 
 .headline {
+  letter-spacing: var(--ls-headline);
   font-family: var(--font-headline);
   font-weight: var(--fw-headline);
   font-size: var(--text-h2);
@@ -94,7 +95,7 @@
   font-size: var(--text-body);
   line-height: var(--lh-body);
   color: rgba(255, 255, 255, 0.62);
-  max-width: 60ch;
+  max-width: 900px;
 }
 
 /* Pillars grid */
@@ -172,7 +173,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--brand-primary);
   flex-shrink: 0;
   transition: background 0.3s var(--ease-out-expo);
 }

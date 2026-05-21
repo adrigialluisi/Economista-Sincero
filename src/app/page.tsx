@@ -38,31 +38,39 @@ export default function Page() {
       />
       <main>
         <Hero
-          tag={hero.tag}
           headline={hero.headline}
           subheadline={hero.subheadline}
-          context={hero.context}
+          checklist={hero.checklist}
+          checklistHighlight={hero.checklistHighlight}
           ctaText={hero.ctaText}
           ctaMicrocopy={hero.ctaMicrocopy}
           ctaUrl={platform.checkoutUrl}
           heroImage={author.photos.hero}
           authorName={author.name}
         />
-        <Pain />
+        <Pain 
+          headline={pain.headline}
+          narrative={pain.narrative}
+          bulletsIntro={pain.bulletsIntro}
+          bullets={pain.bullets}
+          closing={pain.closing}
+          closingBold={pain.closingBold}
+        />
         <Solution
           label={solution.label}
           headline={solution.headline}
           description={solution.description}
           pillars={solution.pillars}
           closing={solution.closing}
-          ctaText={hero.ctaText}
+          ctaText={solution.ctaText}
           ctaUrl={platform.checkoutUrl}
         />
         <Moment
           headline={moment.headline}
           narrative={moment.narrative}
-          quote={moment.quote}
+          bullets={moment.bullets}
           closing={moment.closing}
+          closingBold={moment.closingBold}
         />
         <Authority
           name={author.name}
@@ -72,40 +80,45 @@ export default function Page() {
           photo={author.photos.authority}
         />
         <SocialProof
+          headline={socialProof.headline}
           testimonials={socialProof.testimonials}
           stats={socialProof.stats}
         />
         <Offer
           headline={offer.headline}
-          anchorText={offer.anchorText}
+          cardTitle={offer.cardTitle}
           priceList={offer.priceList}
           priceCurrent={offer.priceCurrent}
           priceMonthly={offer.priceMonthly}
           pricePeriod={offer.pricePeriod}
-          priceNote={offer.priceNote}
+          badge={offer.badge}
           priceComparison={offer.priceComparison}
+          benefitsTitle={offer.benefitsTitle}
+          benefits={offer.benefits}
           ctaText={offer.ctaText}
           ctaUrl={platform.checkoutUrl}
         />
         <Guarantee
-          days={guarantee.days}
+          headline={guarantee.headline}
+          subheadline={guarantee.subheadline}
           text={guarantee.text}
+          photo={author.photos.guarantee}
         />
         <FAQ items={faq} />
         <Closing
+          label={closing.label}
           headline={closing.headline}
-          pathA={closing.pathA}
-          pathB={closing.pathB}
-          summary={closing.summary}
+          subheadline={closing.subheadline}
+          checklist={closing.checklist}
           ctaText={closing.ctaText}
           ctaUrl={platform.checkoutUrl}
           photo={author.photos.closing}
           authorName={author.name}
-          authorTitle={author.title}
         />
       </main>
       <Footer
         logo={footer.logo}
+        tagline={footer.tagline}
         links={footer.links}
         copyright={footer.copyright}
       />

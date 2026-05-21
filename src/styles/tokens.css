@@ -102,6 +102,7 @@
   --lh-body:    1.75;          /* Body → 28px em 16px */
 
   /* Letter spacing */
+  --ls-headline: 1.5px;
   --ls-eyebrow: 0.02em;        /* 2% — Labels acima dos títulos */
   --ls-button:  0.07em;        /* Botões */
 

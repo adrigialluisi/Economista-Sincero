@@ -1,164 +1,198 @@
 # Copy — LP P3X | Charles Mendlowicz
-
 > Copy completo da Landing Page da P3X, organizado por seção.
-> Fonte: "COPY PAGINA VENDAS BASE 12 MAIO (2).docx"
-> Tom: direto, sem firula, Charles em primeira pessoa, zero emoji.
+> Fonte: "[P3X] Página de vendas 20_05.pdf" — Versão 02 (aprovada em 21/05/2026)
+> Tom: direto, sem firula, zero emoji (exceto ícones dos cards na Seção 03).
 
 ---
 
 ## SEÇÃO 01 — HERO
 
+**Layout:** Duas colunas. Esquerda: copy + CTA. Direita: foto do Charles + mockup com imagem real do dashboard.
+
 **Headline:**
-> Para quem cansou de não saber, no domingo à noite, quanto realmente tem investido.
+> PARE DE INVESTIR NO ESCURO.
 
-**Subtítulo (2 linhas):**
-> Você não tem um problema de dinheiro.
-> Você tem um problema de visão.
+**Subtítulo:**
+> A P3X conecta sua conta da B3, organiza seus investimentos e mostra o que fazer com clareza.
 
-**Parágrafo de contexto:**
-> A P3X conecta sua conta da B3, organiza tudo o que você já tem e mostra o que fazer com o que falta. É a primeira plataforma brasileira que entrega a coisa mais cara do mundo dos investimentos: clareza.
+**Checklist:**
+```
+✔ Consolidador de carteira
+✔ Carteiras recomendadas
+✔ Cursos
+✔ Comunidade ativa
+
+TUDO EM UM SÓ LUGAR
+```
 
 **CTA Principal:**
-> [ QUERO VER MEU DINHEIRO COM CLAREZA → ]
+> ( QUERO TER CLAREZA NOS MEUS INVESTIMENTOS )
 
 **Microcopy abaixo do CTA:**
-> "Acesso imediato. Garantia de 7 dias. Seus ativos continuam na sua corretora."
+> Acesso imediato • Garantia de 7 dias • Seus ativos continuam na sua corretora
 
-**Asset:** Imagem real do dashboard com B3 conectada.
+**Asset:** Foto do Charles + mockup com imagem real do dashboard (carteira do canal).
 
 ---
 
 ## SEÇÃO 02 — DOR
 
 **Headline:**
-> Deixa eu adivinhar como é o seu domingo à noite.
+> SEUS INVESTIMENTOS ESTÃO DESORGANIZADOS E SEM LÓGICA E ISSO CUSTA CARO.
 
-**Texto corrido:**
-> Você abre o app da corretora. Olha o saldo. Fecha. Lembra que tem dinheiro em outra corretora também. Pensa em fazer um aporte, mas não sabe se compra mais do que já tem ou se diversifica. Pensa em rebalancear, mas não sabe quanto cada coisa pesa hoje. Fecha tudo. Vai dormir com aquela sensação meio surda de quem está fazendo alguma coisa, mas não sabe direito o quê.
+**Texto (linhas separadas):**
+> Você abre a corretora.
+> Depois outro app.
+> Depois uma planilha.
 
-**Parágrafo de virada:**
-> Não é falta de inteligência. Não é falta de dinheiro. É falta de um lugar onde tudo faça sentido junto.
+**E no final… ainda não sabe:**
+- quanto realmente tem
+- se está fazendo certo
+- ou o que deveria fazer amanhã
 
-**Parágrafo de transição:**
-> E enquanto você troca entre sete abas para responder uma pergunta simples — "quanto eu tenho, onde está, e o que eu faço amanhã?" — o seu dinheiro fica parado, mal alocado, ou decidido no impulso.
+**Encerramento:**
+> O problema não é falta de inteligência. É **FALTA DE CLAREZA.**
 
 ---
 
 ## SEÇÃO 03 — O QUE É A P3X
 
-**Label:**
-> O ecossistema completo do investidor brasileiro.
+**Headline:**
+> O ECOSSISTEMA COMPLETO DO INVESTIDOR.
 
-**Desconstrução de posicionamento:**
-> Não é APENAS uma COMUNIDADE. Não é mais um curso. Não é mais um agregador. É a melhor plataforma brasileira que junta, num só ambiente, as quatro coisas que um investidor sério precisa pra parar de operar no escuro:
+**Subtítulo:**
+> A P3X junta, em um único lugar, tudo que um investidor precisa para deixar de tomar decisões no escuro.
 
-**Os 4 Pilares:**
+**4 Cards (layout visual):**
 
-→ **Consolidador integrado à B3**
-> Conecta uma vez, vê tudo: ações, FIIs, renda fixa, BDRs. Patrimônio, alocação, dividendos. Sem digitar nada. Sem custódia — seus ativos continuam na sua corretora.
+| 📊 Consolidador integrado à B3 | 📈 Carteiras recomendadas | 🎓 Cursos e conteúdos | 🤝 Comunidade ativa |
+|---|---|---|---|
+| Veja ações, FIIs, renda fixa e dividendos em segundos. | Brasil e exterior com atualização contínua. | Do básico ao avançado, sem enrolação. | Troca de ideias com milhares de investidores. |
 
-→ **Carteiras recomendadas — Brasil e Exterior**
-> Estruturadas e atualizadas continuamente, com a tese por trás de cada movimento. Você para de adivinhar.
+**Texto abaixo dos cards:**
+> TUDO COM O MÉTODO E A VISÃO DO CHARLÃO.
 
-→ **Cursos e conteúdos**
-> Do iniciante ao avançado, mercado nacional e internacional. Conteúdo vivo, atualizado com o cenário.
-
-→ **Comunidade ativa**
-> Milhares de investidores trocando tese, validando decisão. Sem ruído, em um ambiente exclusivo e seguro.
-
-**Fecho da seção:**
-> E acima de tudo, com o olhar e o método do Charlão. Sem enrolação e sem promessa milagrosa.
+**CTA:**
+> [ QUERO TER CLAREZA NOS MEUS INVESTIMENTOS ]
 
 ---
 
-## SEÇÃO 04 — O MOMENTO QUE MUDA TUDO
+## SEÇÃO 04 — MOMENTO QUE MUDA TUDO
+
+**Layout:** Duas colunas. Esquerda: copy. Direita: vídeo do consolidador.
 
 **Headline:**
-> Tem um momento, dentro da P3X, que muda alguma coisa em quem entra.
+> O MOMENTO QUE MUDA TUDO.
 
 **Texto:**
-> É quando você conecta sua conta da B3 pela primeira vez.
+> Você conecta sua conta da B3.
 >
-> Leva trinta segundos. A tela carrega. E aí, de repente, está tudo ali. Cada ação que você esqueceu. Cada FII que acumulou. Cada centavo de dividendo que pingou. Quanto você tem, onde está, como cresceu.
+> A tela carrega.
 >
-> Pela primeira vez você olha para a tela e pensa:
+> E pela primeira vez você vê:
+- quanto tem
+- onde está
+- como evoluiu
 
-**Quote de impacto:**
-> "Caralh#, é isso que eu tenho."
+**Encerramento:**
+> Sem planilha. Sem achismo. **Só clareza.**
 
-**Fecho:**
-> Não é mágica. É só o seu dinheiro, finalmente visível. E é a partir daí que toda decisão fica mais fácil.
-
-**Asset:** Vídeo curto 15-20s mostrando a tela do consolidador (recomendado).
+**Asset:** Vídeo do consolidador (a fornecer).
 
 ---
 
 ## SEÇÃO 05 — AUTORIDADE
 
-*(Ver INFLUENCER-CHARLES.md para bio e credenciais completas.)*
+**Label:**
+> ECONOMISTA SINCERO
 
-**Bio curta para a LP:**
-> Charles Mendlowicz é economista com 30 anos de experiência real no mercado financeiro. Criador do canal Economista Sincero — eleito 4 vezes o melhor influenciador de investimentos do Brasil pela ANBIMA. Sem enrolação, sem promessa milagrosa.
+**Headline:**
+> CHARLES MENDLOWICZ
+
+**Bio:**
+> Charles Mendlowicz é economista formado pela UERJ, com MBA em Gestão Estratégica (UFF) e MBA em Logística (FGV). São 30 anos de experiência real no mercado financeiro. Autor do best-seller "18 Princípios para Você Evoluir", publicado em 3 idiomas. Desde 2018, lidera o canal Economista Sincero, democratizando o acesso à educação financeira com uma abordagem direta, transparente e sem enrolação.
+
+**Credenciais (grid 2x2):**
+```
+✔️ 30 anos de mercado              ✔️ 4x melhor influenciador ANBIMA
+✔️ Livro publicado em 3 idiomas   ✔️ 2x Top 03 IBEST
+```
 
 ---
 
 ## SEÇÃO 06 — PROVA SOCIAL
 
-**Instrução de produção:**
-> *(Depoimentos de alunos destaque da EVL validando o que é estar em comunidade e com clareza técnica.)*
+**Headline:**
+> QUEM ENTROU, ENTENDEU RÁPIDO.
 
-**Depoimento 1** — foco em antes/depois:
-> "[Depoimento — idealmente alguém que dramatize o antes/depois. Ex: descobriu concentração que não sabia que tinha, parou de operar no escuro, etc.]"
-> — [Nome], [profissão / cidade]
+**Layout:** Grid 3x2 — seis depoimentos. *(Textos a receber da Adri.)*
 
-**Depoimento 2** — foco em iniciante:
-> "[Depoimento — foco em alguém que era iniciante e ganhou autonomia.]"
-> — [Nome], [profissão / cidade]
+```
+[depoimento 1]   [depoimento 2]   [depoimento 3]
+[depoimento 4]   [depoimento 5]   [depoimento 6]
+```
 
-**Depoimento 3** — foco em patrimônio relevante:
-> "[Depoimento — foco em alguém com patrimônio relevante que ganhou em organização/eficiência.]"
-> — [Nome], [profissão / cidade]
-
-**Faixa de números** *(preencher após 30 dias de atividade):*
-> [X] mil investidores ativos
-> R$ [X] milhões em patrimônio acompanhado
-> [X] carteiras recomendadas atualizadas
+**Faixa de números:**
+```
++X mil investidores ativos   |   R$X milhões acompanhados   |   X carteiras atualizadas
+```
+*(Valores a preencher quando disponíveis.)*
 
 ---
 
 ## SEÇÃO 07 — OFERTA
 
 **Headline:**
-> Quanto custa parar de operar no escuro?
-
-**Texto de âncora:**
-> Antes do número, faz uma conta. Quanto você perdeu no último ano por não ter clareza? Aporte parado em conta corrente. Posição que caiu por inércia. Imposto pago a mais. Provavelmente esse número passou de R$ 597 só nos últimos doze meses.
+> QUANTO CUSTA PARAR DE INVESTIR NO ESCURO?
 
 **Card de preço:**
 ```
-Assinatura anual P3X
+ASSINATURA ANUAL P3X
 
-De: R$ 997,00
-Por: R$ 597,00 /ano
-= equivalente a R$ 49,75 por mês
+De: R$997,00  [badge 40% off]
+POR: R$597,00/ANO
 
-Acesso completo ao ecossistema, atualizado o ano inteiro.
-Menos do que você gasta em delivery num mês comum.
+Equivalente a R$49,75/mês.
+Menos do que uma pizza.
+```
+
+**Bloco ACESSO COMPLETO:**
+```
+ACESSO COMPLETO
+• Consolidador de carteira - integrado à B3
+• Carteiras recomendadas - Brasil e Exterior
+• Cursos do iniciante ao avançado
+• Comunidade ativa, moderada, sem ruído
+• Acesso por 12 meses completos a tudo
 ```
 
 **CTA:**
-> [ COMEÇAR AGORA — R$ 597/ANO → ]
+> [ COMEÇAR AGORA ]
 
 ---
 
 ## SEÇÃO 08 — GARANTIA
 
-**Texto completo:**
-> Entra. Conecta a B3. Mexe na plataforma. Se em até 7 dias você achar que não é para você, por qualquer motivo, inclusive nenhum — manda um e-mail e a gente devolve 100%. Sem pergunta, sem retenção. O risco é nosso.
+**Layout:** Duas colunas. Esquerda: copy. Direita: foto do Charles.
+
+**Headline:**
+> O RISCO É MEU
+
+**Subtítulo:**
+> Garantia de 7 dias
+
+**Texto:**
+> Entre, conecte sua B3 e teste a plataforma.
+> Se não fizer sentido pra você, devolvemos 100%.
+> Sem burocracia.
+
+**Asset:** Foto do Charles (camisa do Vasco).
 
 ---
 
-## SEÇÃO 09 — PERGUNTAS RÁPIDAS (FAQ)
+## SEÇÃO 09 — FAQ (PERGUNTAS RÁPIDAS)
+
+**→ Manter como estava. Nenhuma alteração.**
 
 **P1:** "A P3X tem custódia dos meus ativos?"
 > Não. Em hipótese nenhuma. Seus ativos continuam na sua corretora. A P3X só lê os dados via integração oficial da B3.
@@ -177,33 +211,46 @@ Menos do que você gasta em delivery num mês comum.
 
 ---
 
-## SEÇÃO 10 — FECHAMENTO
+## SEÇÃO 10 — DECISÃO
+
+**Layout:** Duas colunas. Esquerda: copy + CTA. Direita: foto do Charles.
 
 **Headline:**
-> Você tem dois caminhos a partir daqui.
+> VOCÊ PODE CONTINUAR NO ESCURO…
 
-**Caminho A (negativo):**
-> Um é fechar essa página, voltar para o app da corretora, abrir a planilha que você não atualiza desde julho, e seguir tomando decisão financeira baseada em pedaço de informação.
+**Subtítulo:**
+> Ou entrar agora na P3X e finalmente enxergar seu dinheiro com clareza.
 
-**Caminho B (positivo):**
-> O outro é entrar na P3X agora, conectar sua conta da B3 nos próximos cinco minutos, e finalmente ver com clareza o que está acontecendo com o seu dinheiro.
+**Checklist:**
+```
+✔ Garantia de 7 dias
+✔ R$597 no ano
+✔ Acesso imediato
+```
 
-**Linha de resumo:**
-> Sete dias de garantia. R$ 597 no ano. Acesso imediato.
-
-**CTA Final:**
-> [ ENTRAR NA P3X AGORA → ]
-
-**Assinatura:**
-> — Charles Mendlowicz
-> Economista Sincero
+**CTA:**
+> [ ENTRAR NA P3X AGORA ]
 
 ---
 
-## NOTAS DE PRODUÇÃO (do arquivo original)
+## FOOTER
 
-- **Tom:** direto, sem firula. Charles em primeira pessoa do início ao fim.
-- **Zero emoji.**
-- **Visual:** paleta sóbria (verde P3X `#2A9345` + branco + grafite `#2D2D2D`).
-- **Imagens REAIS do dashboard** — não mockup.
-- **VSL recomendada:** vídeo de 2-3min do Charles cobrindo Seções 02, 03 e 04 no topo. Substitui boa parte do texto e aumenta conversão.
+**Tagline:**
+> Onde informação vira decisão e decisão vira renda.
+
+**Links:** Contato | Termos de Uso | Política de Privacidade
+
+**Rodapé legal:**
+> © 2026 P3X. Todos os direitos reservados. • P3X não é corretora | sem custódia de ativos
+
+---
+
+## Notas de Design — V2
+
+- **Visual:** Mais clean, hierarquia clara, menos texto corrido.
+- **Fonte:** Revisar para algo mais legível (a definir com Adri).
+- **Emojis:** Apenas nos cards da Seção 03. Zero no restante da página.
+- **Imagens:** Reais do dashboard — não mockup.
+- **Vídeo:** Embed na Seção 04. O Charles vai fornecer.
+- **Depoimentos:** 6 slots em grid 3x2. Copy a receber.
+- **Números:** Placeholders [X] — preencher quando disponíveis.

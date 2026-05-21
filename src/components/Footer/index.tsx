@@ -9,11 +9,12 @@ interface FooterLink {
 interface FooterProps {
   logo: string
   logoAlt?: string
+  tagline: string
   links: FooterLink[]
   copyright: string
 }
 
-export default function Footer({ logo, logoAlt = 'P3X', links, copyright }: FooterProps) {
+export default function Footer({ logo, logoAlt = 'P3X', tagline, links, copyright }: FooterProps) {
   return (
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.inner}>
@@ -27,7 +28,7 @@ export default function Footer({ logo, logoAlt = 'P3X', links, copyright }: Foot
               style={{ objectFit: 'contain', objectPosition: 'left center', width: '260px', height: 'auto', display: 'block' }}
             />
             <p className={styles.tagline}>
-              Onde informação vira decisão e decisão vira renda.
+              {tagline}
             </p>
           </div>
           <nav className={styles.nav} aria-label="Links do rodapé">
@@ -41,7 +42,6 @@ export default function Footer({ logo, logoAlt = 'P3X', links, copyright }: Foot
 
         <div className={styles.bottom}>
           <p className={styles.copyright}>{copyright}</p>
-          <span className={styles.disclaimer}>P3X não é corretora — sem custódia de ativos</span>
         </div>
       </div>
     </footer>

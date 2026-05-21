@@ -1,34 +1,11 @@
 import type { ReactNode } from 'react'
 import styles from './Solution.module.css'
 
-const ICONS: ReactNode[] = [
-  <svg key="chart" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <rect x="2" y="13" width="4" height="8" rx="1" fill="currentColor" opacity=".5"/>
-    <rect x="9" y="8" width="4" height="13" rx="1" fill="currentColor" opacity=".75"/>
-    <rect x="16" y="3" width="4" height="18" rx="1" fill="currentColor"/>
-  </svg>,
-  <svg key="portfolio" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-    <rect x="3" y="7" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.8"/>
-    <path d="M3 12h18M12 12v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-  </svg>,
-  <svg key="play" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8"/>
-    <path d="M10 8.5l6 3.5-6 3.5V8.5z" fill="currentColor"/>
-  </svg>,
-  <svg key="users" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <circle cx="8.5" cy="7.5" r="3.5" stroke="currentColor" strokeWidth="1.8"/>
-    <path d="M2 20c0-3.314 2.91-6 6.5-6s6.5 2.686 6.5 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-    <path d="M16 4c1.657 0 3 1.343 3 3s-1.343 3-3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-    <path d="M20 20c0-2.761-1.79-5-4-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-  </svg>,
-]
-
 interface SolutionProps {
   label: string
   headline: string
   description: string
-  pillars: Array<{ title: string; description: string }>
+  pillars: Array<{ icon: string; title: string; description: string }>
   closing: string
   ctaText: string
   ctaUrl: string
@@ -43,11 +20,12 @@ export default function Solution({
   ctaText,
   ctaUrl,
 }: SolutionProps) {
-  // Destaca "as quatro coisas" no fim da descrição
-  const lastWord = (text: string) => {
-    const i = text.lastIndexOf(' ')
-    return i > 0 ? [text.slice(0, i), text.slice(i + 1)] : [text, '']
-  }
+  const SVGS = [
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ width: '22px', height: '22px' }}><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>,
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ width: '22px', height: '22px' }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>,
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ width: '22px', height: '22px' }}><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>,
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ width: '22px', height: '22px' }}><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+  ];
 
   return (
     <section id="solucao" className={styles.solution}>
@@ -55,7 +33,7 @@ export default function Solution({
         <header className={styles.header}>
           <span className={styles.label}>{label}</span>
           <h2 className={styles.headline}>
-            NÃO É <span className={styles.headlineEm}>APENAS</span> UMA <span className={styles.headlineEm}>COMUNIDADE</span>. NÃO É MAIS UM CURSO. NÃO É MAIS UM AGREGADOR.
+            {headline}
           </h2>
           <p className={styles.description}>{description}</p>
         </header>
@@ -64,7 +42,9 @@ export default function Solution({
           {pillars.map((pillar, i) => (
             <div key={pillar.title} className={styles.card}>
               <span className={styles.cardNum}>0{i + 1}</span>
-              <div className={styles.iconWrap}>{ICONS[i]}</div>
+              <div className={styles.iconWrap}>
+                {SVGS[i] || pillar.icon}
+              </div>
               <h3 className={styles.cardTitle}>{pillar.title}</h3>
               <p className={styles.cardDesc}>{pillar.description}</p>
             </div>
@@ -73,8 +53,7 @@ export default function Solution({
 
         <div className={styles.bottomBlock}>
           <p className={styles.closingText}>
-            E ACIMA DE TUDO, <span className={styles.closingTextEm}>COM O OLHAR E O MÉTODO DO CHARLÃO.</span><br />
-            SEM ENROLAÇÃO E SEM PROMESSA MILAGROSA.
+            {closing}
           </p>
 
           <a href={ctaUrl} className={styles.cta}>

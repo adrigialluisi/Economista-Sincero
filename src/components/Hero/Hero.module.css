@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-color: var(--brand-dark);
+  background-color: #060A14;
   padding-top: 72px;
   min-height: 100svh;
   display: flex;
@@ -9,20 +9,7 @@
   isolation: isolate;
 }
 
-/* Grid sutil de fundo */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 75%);
-  pointer-events: none;
-  z-index: -1;
-}
+
 
 /* Glow radial sutil atrás do headline */
 .glow {
@@ -80,8 +67,8 @@
 
 @media (min-width: 1024px) {
   .inner {
-    grid-template-columns: 58fr 42fr;
-    gap: 5rem;
+    grid-template-columns: 53fr 47fr;
+    gap: 4rem;
   }
 }
 
@@ -145,6 +132,7 @@
 }
 
 .headline {
+  letter-spacing: var(--ls-headline);
   font-family: var(--font-headline);
   font-weight: var(--fw-headline);
   font-size: var(--text-hero);
@@ -373,23 +361,25 @@
 @media (min-width: 768px) {
   .imageWrapper {
     aspect-ratio: unset;
-    height: clamp(500px, 76vh, 680px);
+    height: clamp(550px, 82vh, 760px);
   }
 }
 
 .photo {
   object-fit: cover;
   object-position: center 18%;
+  transform: scale(1.06);
 }
 
-/* Fusão da foto com o fundo escuro */
+/* Fusão da foto com o fundo escuro nas 4 bordas */
 .imageGradient {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, #000000 0%, transparent 35%),
-    linear-gradient(to top, #000000 0%, transparent 22%),
-    linear-gradient(to left, rgba(0,0,0,0.4) 0%, transparent 20%);
+    linear-gradient(to right, #060A14 0%, transparent 35%),
+    linear-gradient(to left, #060A14 0%, transparent 35%),
+    linear-gradient(to top, #060A14 0%, transparent 22%),
+    linear-gradient(to bottom, #060A14 0%, transparent 20%);
   pointer-events: none;
   user-select: none;
 }
@@ -397,9 +387,10 @@
 @media (min-width: 768px) {
   .imageGradient {
     background:
-      linear-gradient(to right, #000000 0%, transparent 30%),
-      linear-gradient(to top, #000000 0%, transparent 18%),
-      linear-gradient(to left, rgba(0,0,0,0.35) 0%, transparent 12%);
+      linear-gradient(to right, #060A14 0%, transparent 30%),
+      linear-gradient(to left, #060A14 0%, transparent 20%),
+      linear-gradient(to top, #060A14 0%, transparent 18%),
+      linear-gradient(to bottom, #060A14 0%, transparent 12%);
   }
 }
 

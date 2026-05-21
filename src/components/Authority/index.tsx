@@ -36,7 +36,7 @@ export default function Authority({ name, title, bioFull, credentials, photo }: 
             <h2 className={styles.name}>{name}</h2>
           </div>
           <p className={styles.bio}>{bioFull}</p>
-          <ul className={styles.credentials} aria-label="Credenciais">
+          <ul className={styles.credentials} aria-label="Credenciais" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
             {credentials.map((cred) => (
               <li key={cred} className={styles.credItem}>
                 <span className={styles.credCheck} aria-hidden="true">

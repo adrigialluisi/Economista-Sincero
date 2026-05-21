@@ -69,8 +69,7 @@
   display: none;
   gap: 1.5rem;
   align-items: center;
-  margin-left: auto;
-  margin-right: 2rem;
+  margin-left: 3rem;
 }
 
 @media (min-width: 900px) {
@@ -136,6 +135,27 @@
 
 .linkActive::after {
   transform: scaleX(1);               /* Barra sempre visível */
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.loginLink {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-button);
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.loginLink:hover {
+  color: var(--brand-primary);
 }
 
 .cta {
