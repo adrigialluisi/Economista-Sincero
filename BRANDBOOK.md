@@ -53,28 +53,27 @@ Texto sobre fundo claro  → #000000 (Preto)
 
 ## 🔤 Tipografia
 
-### Família Principal — TuskerGrotesk (Headlines)
+### Família Principal — Bebas Neue (Headlines)
 
-Fonte display da marca. Usada em títulos, headlines e chamadas de impacto.
+Fonte display da marca. Usada em todos os títulos, headlines e chamadas de impacto.
+Substituiu a TuskerGrotesk em 25/05/2026.
 
-**Localização dos arquivos:** `./font/TuskerGrotesk-*.ttf`
+**Arquivo local:** `public/fonts/BebasNeue-Regular.ttf`
+**Google Fonts (fallback):** `https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap`
 
-| Largura | Medium (500) | Semibold (600) | Bold (700) | Super (800) |
-|---|---|---|---|---|
-| 1x (condensed) | ✅ | ✅ | ✅ | ✅ |
-| 2x | ✅ | ✅ | ✅ | ✅ |
-| 3x | ✅ | ✅ | ✅ | ✅ |
-| 4x | ✅ | ✅ | ✅ | ✅ |
-| 5x | ✅ | ✅ | ✅ | ✅ |
-| 6x | ✅ | ✅ | ✅ | ✅ |
-| 7x | — | ✅ | ✅ | ✅ |
-| 8x | — | — | ✅ | ✅ |
-| 9x (extended) | — | — | — | ✅ |
+| Peso disponível | Uso |
+|---|---|
+| Regular (400) | Único peso — todos os títulos e headlines |
+
+**Notas de uso:**
+- Bebas Neue tem apenas um peso (Regular 400). Para variar hierarquia, use tamanho e espaçamento.
+- A fonte é toda maiúscula por natureza — `text-transform: uppercase` é opcional mas recomendado para consistência no CSS.
+- Excelente legibilidade em tamanhos grandes. Não usar abaixo de 20px.
 
 **Pesos recomendados para a LP:**
-- Headlines H1: `TuskerGrotesk-6700Bold` ou `TuskerGrotesk-6800Super`
-- Headlines H2/H3: `TuskerGrotesk-5600Semibold` ou `TuskerGrotesk-5700Bold`
-- Chamadas de seção: `TuskerGrotesk-4600Semibold`
+- Headlines H1 (Hero): `font-size: var(--text-hero)` — Bebas Neue Regular
+- Headlines H2 (Títulos de seção): `font-size: var(--text-h2)` — Bebas Neue Regular
+- Chamadas de seção / H3: `font-size: var(--text-h3)` — Bebas Neue Regular
 
 ### Família Secundária — Proxima Nova (Corpo)
 
@@ -97,19 +96,19 @@ font-family: 'Proxima Nova', 'Inter', 'Helvetica Neue', Arial, sans-serif;
 | Elemento | Fonte | Peso | Tamanho | Line Height | Letter Spacing | Cor |
 |---|---|---|---|---|---|---|
 | **Eyebrow** (acima dos títulos) | Proxima Nova | Semibold 600 | 12px | — | 2% (0.02em) | Verde `#2A9345` |
-| **H1 — Hero** | TuskerGrotesk 3600 | Semibold 600 | 48px | 70px | — | Branco |
-| **H2 — Títulos de seção** | TuskerGrotesk 3600 | Semibold 600 | 40px | 56px | — | Branco ou Preto |
+| **H1 — Hero** | Bebas Neue | Regular 400 | 48px | 70px | — | Branco |
+| **H2 — Títulos de seção** | Bebas Neue | Regular 400 | 40px | 56px | — | Branco ou Preto |
 | **Body text** | Proxima Nova | Regular 400 | 16px | 28px | — | Branco |
 | **Texto de botão** | Proxima Nova | Semibold 600 | 14px | — | — | Uppercase |
 | **Caption** | Proxima Nova | Regular 400 | 12px | — | — | Branco |
 
-> **Nota TuskerGrotesk:** "3600" = série 3 (condensed), peso Semibold → `font-weight: 600` no CSS.
-> Todos os textos TuskerGrotesk devem ter `text-transform: uppercase`.
+> **Nota Bebas Neue:** fonte de peso único (Regular 400). Toda a hierarquia de títulos é feita por tamanho.
+> Todos os textos Bebas Neue devem ter `text-transform: uppercase`.
 
 ```css
 :root {
   /* === TIPOGRAFIA — tokens definitivos === */
-  --font-headline: 'TuskerGrotesk', sans-serif;
+  --font-headline: 'Bebas Neue', sans-serif;
   --font-body:     'Proxima Nova', 'Inter', sans-serif;
 
   /* Tamanhos */
@@ -130,7 +129,7 @@ font-family: 'Proxima Nova', 'Inter', 'Helvetica Neue', Arial, sans-serif;
   --ls-button:  0.07em;
 
   /* Font weights */
-  --fw-headline: 600;        /* TuskerGrotesk 3600 Semibold */
+  --fw-headline: 400;        /* Bebas Neue Regular — único peso disponível */
   --fw-body:     400;        /* Proxima Nova Regular */
   --fw-semibold: 600;        /* Proxima Nova Semibold — eyebrow e botões */
 }

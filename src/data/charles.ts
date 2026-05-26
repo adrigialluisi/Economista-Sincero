@@ -53,9 +53,10 @@ export const hero = {
   tag: 'Economista Sincero', // unused now?
   headline: 'PARE DE INVESTIR NO ESCURO.',
   subheadline: {
-    before: 'A P3X conecta sua conta da B3,\norganiza seus investimentos e',
-    highlight: 'mostra o que fazer com clareza.'
+    before: 'VOCÊ NÃO TEM UM PROBLEMA DE DINHEIRO. TEM UM PROBLEMA DE ',
+    highlight: 'VISÃO.'
   },
+  description: 'A P3X conecta sua conta da B3 e mostra tudo organizado já na primeira vez que você entra.',
   checklist: [
     'Consolidador de carteira',
     'Carteiras recomendadas',
@@ -63,13 +64,13 @@ export const hero = {
     'Comunidade ativa'
   ],
   checklistHighlight: 'TUDO EM UM SÓ LUGAR',
-  ctaText: 'QUERO TER CLAREZA NOS MEUS INVESTIMENTOS',
+  ctaText: 'QUERO ENXERGAR MEUS INVESTIMENTOS COM CLAREZA',
   ctaMicrocopy:
     'Acesso imediato • Garantia de 7 dias • Seus ativos continuam na sua corretora',
 }
 
 export const pain = {
-  headline: 'SEUS INVESTIMENTOS ESTÃO DESORGANIZADOS E SEM LÓGICA E ISSO CUSTA CARO.',
+  headline: 'O PONTO CEGO\nSeus investimentos estão espalhados, e isso custa caro.',
   narrative: [
     'Você abre a corretora.',
     'Depois outro app.',
@@ -91,8 +92,8 @@ export const solution = {
   description:
     'A P3X junta, em um único lugar, tudo que um investidor precisa para deixar de tomar decisões no escuro.',
   closing:
-    'TUDO COM O MÉTODO E A VISÃO DO CHARLÃO.',
-  ctaText: 'QUERO TER CLAREZA NOS MEUS INVESTIMENTOS',
+    'Tudo do jeito que o Charlão pensa e investe.',
+  ctaText: 'QUERO ENXERGAR MEUS INVESTIMENTOS COM CLAREZA',
   pillars: [
     {
       icon: '📊',
@@ -117,6 +118,12 @@ export const solution = {
       title: 'Comunidade ativa',
       description:
         'Troca de ideias com milhares de investidores.',
+    },
+    {
+      icon: '🏷️',
+      title: 'Clube de Benefícios',
+      description:
+        'Descontos em farmácias, mercados, postos, e-commerces e vários serviços que você já usa todo mês.',
     },
   ],
 }
@@ -143,9 +150,6 @@ export const socialProof = {
     { text: '[Depoimento 1 a receber]', name: '[Nome 1]', role: '[Profissão / Cidade]' },
     { text: '[Depoimento 2 a receber]', name: '[Nome 2]', role: '[Profissão / Cidade]' },
     { text: '[Depoimento 3 a receber]', name: '[Nome 3]', role: '[Profissão / Cidade]' },
-    { text: '[Depoimento 4 a receber]', name: '[Nome 4]', role: '[Profissão / Cidade]' },
-    { text: '[Depoimento 5 a receber]', name: '[Nome 5]', role: '[Profissão / Cidade]' },
-    { text: '[Depoimento 6 a receber]', name: '[Nome 6]', role: '[Profissão / Cidade]' },
   ],
   stats: [
     { value: '+[X] mil', label: 'investidores ativos' },
@@ -162,13 +166,14 @@ export const offer = {
   priceMonthly: 'R$49,75',
   pricePeriod: 'ANO',
   badge: '40% off',
-  priceComparison: 'Menos do que uma pizza.',
+  priceComparison: 'Menos do que uma pizza por mês.',
   benefitsTitle: 'ACESSO COMPLETO',
   benefits: [
     'Consolidador de carteira - integrado à B3',
     'Carteiras recomendadas - Brasil e Exterior',
     'Cursos do iniciante ao avançado',
     'Comunidade ativa, moderada, sem ruído',
+    'Clube de Benefícios — economia no dia a dia',
     'Acesso por 12 meses completos a tudo'
   ],
   ctaText: 'COMEÇAR AGORA',
@@ -177,7 +182,7 @@ export const offer = {
 export const guarantee = {
   headline: 'O RISCO É MEU',
   subheadline: 'Garantia de 7 dias',
-  text: 'Entre, conecte sua B3 e teste a plataforma.\nSe não fizer sentido pra você, devolvemos 100%.\nSem burocracia.',
+  text: 'Conecte sua B3 e veja tudo na primeira tela. Se a clareza não aparecer pra você, devolvemos 100% do seu dinheiro. Você tem 7 dias garantidos pra decidir, sem burocracia e sem pergunta chata.',
 }
 
 export const faq = [
@@ -202,9 +207,14 @@ export const faq = [
       'Provavelmente até mais. Quanto maior o patrimônio, mais cara fica a falta de clareza.',
   },
   {
+    question: 'O preço muda quando eu renovar?',
+    answer:
+      'Não, se você entrar no mês de lançamento. Quem assina nessa janela trava o valor: seu preço não muda pelos próximos 2 anos, mesmo que a P3X reajuste para novos assinantes. É a vantagem de entrar cedo.',
+  },
+  {
     question: 'E se eu cancelar?',
     answer:
-      'Você cancela quando quiser, do próprio painel. Sem fidelidade, sem multa, sem ligação de retenção.',
+      'Você cancela quando quiser, pelo próprio painel. Sem fidelidade, sem multa, sem ligação de retenção.',
   },
 ]
 
@@ -213,9 +223,9 @@ export const closing = {
   headline: 'VOCÊ PODE CONTINUAR NO ESCURO…',
   subheadline: 'Ou entrar agora na P3X e finalmente enxergar seu dinheiro com clareza.',
   checklist: [
-    'Garantia de 7 dias',
-    'R$597 no ano',
-    'Acesso imediato'
+    '7 dias de garantia',
+    'R$ 597 no ano (R$ 49,75/mês)',
+    'Preço travado por 2 anos no lançamento'
   ],
   ctaText: 'ENTRAR NA P3X AGORA',
 }

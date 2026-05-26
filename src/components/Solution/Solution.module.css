@@ -100,25 +100,88 @@
 
 /* Pillars grid */
 .pillars {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 1.125rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* hide scrollbar standard */
+  scrollbar-width: none;
 }
 
-@media (min-width: 600px) {
-  .pillars {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-  }
+.pillars::-webkit-scrollbar {
+  display: none;
 }
 
+.carouselWrap {
+  position: relative;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--card-bg-elev);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+.arrow:hover {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: var(--card-bg);
+}
+.arrowLeft {
+  left: -16px;
+}
+.arrowRight {
+  right: -16px;
+}
 @media (min-width: 1024px) {
-  .pillars {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  .arrowLeft { left: -24px; }
+  .arrowRight { right: -24px; }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.dotActive {
+  background: var(--brand-primary);
+  width: 24px;
+  border-radius: 4px;
 }
 
 .card {
+  flex: 0 0 calc(85vw - 2rem);
+  max-width: 340px;
+  scroll-snap-align: start;
   position: relative;
   background: var(--card-bg);
   border: var(--border-subtle);
@@ -132,6 +195,12 @@
               background 0.4s var(--ease-out-expo);
   overflow: hidden;
   isolation: isolate;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 280px;
+  }
 }
 
 .card::before {

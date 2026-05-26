@@ -33,7 +33,10 @@ export default function Moment({ headline, narrative, bullets, closing, closingB
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '2px' }}>
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span>{bullet}</span>
+                  <span>
+                    <span style={{ color: 'var(--brand-primary)' }}>{bullet.split(' ')[0]}</span>{' '}
+                    {bullet.substring(bullet.indexOf(' ') + 1)}
+                  </span>
                 </li>
               ))}
             </ul>

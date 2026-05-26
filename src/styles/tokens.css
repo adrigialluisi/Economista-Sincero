@@ -66,7 +66,7 @@
   --brand-mid:     #2d2d2d;
   --brand-light:   #ffffff;
 
-  --font-headline: 'TuskerGrotesk', sans-serif;
+  --font-headline: 'Bebas Neue', sans-serif;
   --font-body:     'Proxima Nova', 'Inter', 'Helvetica Neue', Arial, sans-serif;
 
   /* === DERIVADOS — não alterar === */
@@ -86,8 +86,8 @@
   */
 
   /* Tamanhos */
-  --text-hero:    3rem;        /* 48px  — H1 Hero     | TuskerGrotesk 3600 Uppercase */
-  --text-h2:      2.5rem;      /* 40px  — H2 Seções   | TuskerGrotesk 3600 Uppercase */
+  --text-hero:    3rem;        /* 48px  — H1 Hero     | Bebas Neue Uppercase */
+  --text-h2:      2.5rem;      /* 40px  — H2 Seções   | Bebas Neue Uppercase */
   --text-h3:      clamp(1.5rem, 3vw, 2.25rem);
   --text-body:    1rem;        /* 16px  — Body        | Proxima Nova Regular */
   --text-body-lg: 1.125rem;
@@ -97,8 +97,8 @@
   --text-small:   0.875rem;
 
   /* Line heights */
-  --lh-hero:    70px;          /* H1 Hero */
-  --lh-h2:      56px;          /* H2 Seções */
+  --lh-hero:    1.05;          /* H1 Hero */
+  --lh-h2:      1.05;          /* H2 Seções */
   --lh-body:    1.75;          /* Body → 28px em 16px */
 
   /* Letter spacing */
@@ -107,7 +107,7 @@
   --ls-button:  0.07em;        /* Botões */
 
   /* Font weights utilizados */
-  --fw-headline: 600;          /* TuskerGrotesk 3600 = Semibold */
+  --fw-headline: 400;          /* Bebas Neue = Regular */
   --fw-body:     400;          /* Proxima Nova Regular */
   --fw-semibold: 600;          /* Proxima Nova Semibold — eyebrow, botões */
 

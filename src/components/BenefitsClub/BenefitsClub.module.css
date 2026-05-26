@@ -1,0 +1,115 @@
+.section {
+  padding-block: clamp(4rem, 8vw, 6rem);
+  background-color: #f5f5f5;
+  color: var(--brand-dark);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.eyebrow {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--brand-primary);
+  gap: 0.5rem;
+  margin-bottom: 1.125rem;
+}
+
+.eyebrow::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
+  content: '';
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(42, 147, 69, 0) 0%, var(--brand-primary) 100%);
+  display: inline-block;
+}
+
+.headline {
+  font-family: var(--font-headline);
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2);
+  margin-bottom: 2rem;
+  color: var(--brand-dark);
+}
+
+.textBlock p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 1.25rem;
+  color: var(--brand-dark);
+}
+
+.textBlock p:last-child {
+  margin-bottom: 0;
+}
+
+.textBlock strong {
+  color: var(--brand-primary);
+}
+
+.imageBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  height: 100%;
+  min-height: 300px;
+}
+
+.illustration {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 4rem;
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  color: var(--brand-primary);
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(42, 147, 69, 0.15));
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon:nth-child(1) { animation-delay: 0s; }
+.icon:nth-child(2) { animation-delay: 1s; }
+.icon:nth-child(3) { animation-delay: 2s; }
+.icon:nth-child(4) { animation-delay: 3s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}

@@ -25,7 +25,7 @@ Estes arquivos contêm todo o briefing do projeto. Leia todos antes de escrever 
 
 - **Framework:** Next.js (App Router)
 - **Estilização:** CSS Modules + CSS Custom Properties (tokens em `src/styles/tokens.css`)
-- **Fontes:** TuskerGrotesk (local, pasta `public/fonts/`) + Proxima Nova (Google Fonts fallback ou local)
+- **Fontes:** Bebas Neue (local `public/fonts/BebasNeue-Regular.ttf` + Google Fonts fallback) + Proxima Nova (local)
 - **Imagens:** `next/image` para todas as fotos e assets
 - **Animações:** CSS puro ou Framer Motion (apenas se necessário)
 - **Sem UI library** — componentes próprios, design fiel ao brandbook
@@ -102,7 +102,7 @@ Isso garante que adaptar para um novo influencer = trocar apenas esses dois arqu
   --brand-mid:     #2D2D2D;
   --brand-light:   #FFFFFF;
 
-  --font-headline: 'TuskerGrotesk', sans-serif;
+  --font-headline: 'Bebas Neue', sans-serif;
   --font-body:     'Proxima Nova', 'Inter', sans-serif;
 
   /* === DERIVADOS — não alterar === */

@@ -7,6 +7,7 @@ interface HeroProps {
     before: string
     highlight: string
   }
+  description?: string
   checklist: string[]
   checklistHighlight: string
   ctaText: string
@@ -19,6 +20,7 @@ interface HeroProps {
 export default function Hero({
   headline,
   subheadline,
+  description,
   checklist,
   checklistHighlight,
   ctaText,
@@ -39,13 +41,26 @@ export default function Hero({
           </p>
 
           <h1 className={styles.headline}>
-            {subheadline.before.split('\n').map((line, i) => (
-              <span key={i} style={{ display: 'block' }}>{line}</span>
-            ))}
-            <span style={{ display: 'block', color: 'var(--brand-primary)' }}>
-              {subheadline.highlight}
-            </span>
+            {subheadline.before.split('\n').map((line, i, arr) => {
+              if (i === arr.length - 1) {
+                return (
+                  <span key={i} style={{ display: 'block' }}>
+                    {line}
+                    <span style={{ color: 'var(--brand-primary)' }}>
+                      {subheadline.highlight}
+                    </span>
+                  </span>
+                )
+              }
+              return <span key={i} style={{ display: 'block' }}>{line}</span>
+            })}
           </h1>
+
+          {description && (
+            <p className={styles.description}>
+              {description}
+            </p>
+          )}
 
           {/* New Checklist Block */}
           <div className={styles.checklistBlock} style={{ marginBottom: '2rem' }}>

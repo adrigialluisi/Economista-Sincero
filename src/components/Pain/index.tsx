@@ -10,14 +10,21 @@ interface PainProps {
 }
 
 export default function Pain({
+  headline,
   narrative,
   bulletsIntro,
   bullets,
   closing,
   closingBold,
 }: PainProps) {
-  const headlinePart1 = "SEUS INVESTIMENTOS ESTÃO DESORGANIZADOS E SEM LÓGICA"
-  const headlinePart2 = "E ISSO CUSTA CARO."
+  const headlineParts = headline.split('\n')
+  const eyebrowText = headlineParts.length > 1 ? headlineParts[0] : 'O PONTO CEGO'
+  const mainHeadline = headlineParts.length > 1 ? headlineParts[1] : headline
+  
+  // Tentativa de separar a última parte para o span verde, se houver vírgula
+  const splitIndex = mainHeadline.lastIndexOf(', ')
+  const headlinePart1 = splitIndex !== -1 ? mainHeadline.substring(0, splitIndex + 1) : mainHeadline
+  const headlinePart2 = splitIndex !== -1 ? mainHeadline.substring(splitIndex + 1) : ''
 
   const painIcons = [
     (
@@ -56,7 +63,7 @@ export default function Pain({
         
         {/* Coluna esquerda */}
         <div className={styles.colLeft}>
-          <span className={styles.eyebrow}>O PONTO CEGO</span>
+          <span className={styles.eyebrow}>{eyebrowText}</span>
           
           <h2 className={styles.headline}>
             {headlinePart1} <span>{headlinePart2}</span>

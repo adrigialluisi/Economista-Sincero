@@ -16,8 +16,7 @@ export default function Guarantee({ headline, subheadline, text, photo }: Guaran
           <span className={styles.eyebrow}>{subheadline}</span>
           <h2 className={styles.headline}>{headline}</h2>
           <p className={styles.text}>
-            Entre, conecte sua B3 e teste a plataforma.<br />
-            Se não fizer sentido pra você, devolvemos 100%. Sem burocracia.
+            {text}
           </p>
         </div>
         <div className={styles.imageCol}>

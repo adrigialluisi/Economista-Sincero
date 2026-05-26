@@ -1,0 +1,122 @@
+.section {
+  padding-block: clamp(4rem, 8vw, 6rem);
+  background-color: var(--brand-dark);
+  color: var(--brand-light);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.headline {
+  font-family: var(--font-headline);
+  font-weight: var(--fw-headline);
+  font-size: var(--text-h2);
+  color: var(--brand-light);
+}
+
+.eyebrow {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--brand-primary);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow::before {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--accent);
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(42, 147, 69, 0) 0%, var(--brand-primary) 100%);
+  flex-shrink: 0;
+}
+
+.eyebrow::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(270deg, rgba(42, 147, 69, 0) 0%, var(--brand-primary) 100%);
+  flex-shrink: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: var(--card-bg-elev);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-family: var(--font-headline);
+  font-weight: var(--fw-headline);
+  font-size: 2.5rem;
+  color: var(--brand-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cardSubtitle {
+  font-size: 1.125rem;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.checkIcon {
+  color: var(--brand-primary);
+  flex-shrink: 0;
+  font-weight: bold;
+}

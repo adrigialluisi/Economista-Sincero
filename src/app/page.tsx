@@ -18,10 +18,14 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import VideoHero from '@/components/VideoHero'
 import Pain from '@/components/Pain'
+import HowItWorks from '@/components/HowItWorks'
 import Solution from '@/components/Solution'
+import InlineTestimonial from '@/components/InlineTestimonial'
+import TargetAudience from '@/components/TargetAudience'
 import Moment from '@/components/Moment'
 import Authority from '@/components/Authority'
 import SocialProof from '@/components/SocialProof'
+import BenefitsClub from '@/components/BenefitsClub'
 import Offer from '@/components/Offer'
 import Guarantee from '@/components/Guarantee'
 import FAQ from '@/components/FAQ'
@@ -41,6 +45,7 @@ export default function Page() {
         <Hero
           headline={hero.headline}
           subheadline={hero.subheadline}
+          description={hero.description}
           checklist={hero.checklist}
           checklistHighlight={hero.checklistHighlight}
           ctaText={hero.ctaText}
@@ -58,6 +63,7 @@ export default function Page() {
           closing={pain.closing}
           closingBold={pain.closingBold}
         />
+        <HowItWorks />
         <Solution
           label={solution.label}
           headline={solution.headline}
@@ -67,6 +73,8 @@ export default function Page() {
           ctaText={solution.ctaText}
           ctaUrl={platform.checkoutUrl}
         />
+        <InlineTestimonial />
+        <TargetAudience />
         <Moment
           headline={moment.headline}
           narrative={moment.narrative}
@@ -86,6 +94,7 @@ export default function Page() {
           testimonials={socialProof.testimonials}
           stats={socialProof.stats}
         />
+        <BenefitsClub />
         <Offer
           headline={offer.headline}
           cardTitle={offer.cardTitle}
