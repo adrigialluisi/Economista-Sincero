@@ -216,7 +216,9 @@
   border-radius: var(--radius-pill);
   cursor: pointer;
   width: 100%;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.3;
   position: relative;
   isolation: isolate;
   transition: background 0.25s var(--ease-out-expo),
@@ -490,4 +492,37 @@
   }
 }
 
+/* ===================== MOBILE FIXES ===================== */
+@media (max-width: 767px) {
+  .headline {
+    font-size: clamp(1.875rem, 7.5vw, 2.5rem);
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .ctaBtn {
+    font-size: 0.8rem;
+    padding: 1rem 1.25rem;
+    letter-spacing: 0.04em;
+  }
+
+  .microcopy {
+    font-size: 0.7rem;
+    white-space: normal;
+    line-height: 1.5;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 3 / 4;
+    max-height: 420px;
+    margin: 0 auto;
+  }
+
+  .inner {
+    gap: 1.75rem;
+    padding-block: 2rem;
+  }
+}
 

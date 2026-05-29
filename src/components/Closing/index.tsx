@@ -4,7 +4,7 @@ import styles from './Closing.module.css'
 interface ClosingProps {
   label: string
   headline: string
-  subheadline: string
+  subheadline: { before: string; highlight: string }
   checklist: string[]
   ctaText: string
   ctaUrl: string
@@ -36,7 +36,8 @@ export default function Closing({
           <h2 className={styles.headline}>{headline}</h2>
 
           <div style={{ marginBottom: '2rem', fontSize: '1.25rem', opacity: 0.9 }}>
-            {subheadline}
+            {subheadline.before}
+            <span style={{ color: 'var(--brand-primary)' }}>{subheadline.highlight}</span>
           </div>
 
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0' }}>

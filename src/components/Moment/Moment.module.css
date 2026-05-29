@@ -84,6 +84,7 @@
   font-weight: var(--fw-headline);
   font-size: var(--text-h2);
   line-height: var(--lh-h2);
+  text-transform: uppercase;
   color: var(--brand-light);
   margin-bottom: 1.625rem;
 }

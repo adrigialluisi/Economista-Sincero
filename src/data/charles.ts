@@ -56,14 +56,14 @@ export const hero = {
     before: 'VOCÊ NÃO TEM UM PROBLEMA DE DINHEIRO. TEM UM PROBLEMA DE ',
     highlight: 'VISÃO.'
   },
-  description: 'A P3X conecta sua conta da B3 e mostra tudo organizado já na primeira vez que você entra.',
+  description: 'Você abre a corretora e não sabe direito quanto tem, onde está, nem o que fazer com o dinheiro parado. A P3X conecta sua conta da B3 e mostra tudo organizado já na primeira vez que você entra.',
   checklist: [
-    'Consolidador de carteira',
+    'Consolidador integrado à B3',
     'Carteiras recomendadas',
-    'Cursos',
+    'Cursos do zero ao avançado',
     'Comunidade ativa'
   ],
-  checklistHighlight: 'TUDO EM UM SÓ LUGAR',
+  checklistHighlight: '',
   ctaText: 'QUERO ENXERGAR MEUS INVESTIMENTOS COM CLAREZA',
   ctaMicrocopy:
     'Acesso imediato • Garantia de 7 dias • Seus ativos continuam na sua corretora',
@@ -74,23 +74,24 @@ export const pain = {
   narrative: [
     'Você abre a corretora.',
     'Depois outro app.',
-    'Depois uma planilha.'
+    'Depois aquela planilha que você jurou que ia manter atualizada.'
   ],
-  bulletsIntro: 'E no final… ainda não sabe:',
+  bulletsIntro: 'No fim das contas, você não sabe:',
   bullets: [
-    'quanto realmente tem',
-    'se está fazendo certo',
-    'ou o que deveria fazer amanhã'
+    '**quanto** você realmente tem.',
+    '**se** está fazendo certo.',
+    '**o que** deveria fazer amanhã.'
   ],
-  closingBold: 'FALTA DE CLAREZA.',
-  closing: 'O problema não é falta de inteligência. É ',
+  closing: 'O problema não é você não saber investir.',
+  closingPre: 'É não conseguir ',
+  closingBold: 'enxergar o que você já tem.',
 }
 
 export const solution = {
   label: 'Ecossistema',
-  headline: 'O ECOSSISTEMA COMPLETO DO INVESTIDOR.',
+  headline: 'Tudo o que um investidor precisa. Em um só lugar.',
   description:
-    'A P3X junta, em um único lugar, tudo que um investidor precisa para deixar de tomar decisões no escuro.',
+    'Tudo o que hoje está espalhado em apps, planilhas e abas do navegador fica num lugar só.',
   closing:
     'Tudo do jeito que o Charlão pensa e investe.',
   ctaText: 'QUERO ENXERGAR MEUS INVESTIMENTOS COM CLAREZA',
@@ -99,13 +100,13 @@ export const solution = {
       icon: '📊',
       title: 'Consolidador integrado à B3',
       description:
-        'Veja ações, FIIs, renda fixa e dividendos em segundos.',
+        'Veja ações, FIIs, renda fixa e dividendos em segundos. Atualização automática.',
     },
     {
       icon: '📈',
       title: 'Carteiras recomendadas',
       description:
-        'Brasil e exterior com atualização contínua.',
+        'Brasil e exterior, com a tese explicada e atualização contínua.',
     },
     {
       icon: '🎓',
@@ -117,23 +118,23 @@ export const solution = {
       icon: '🤝',
       title: 'Comunidade ativa',
       description:
-        'Troca de ideias com milhares de investidores.',
+        'Troca de ideias com milhares de investidores, num espaço moderado e sem ruído.',
     },
     {
       icon: '🏷️',
       title: 'Clube de Benefícios',
       description:
-        'Descontos em farmácias, mercados, postos, e-commerces e vários serviços que você já usa todo mês.',
+        'Descontos em farmácias, mercados, postos e e-commerces que você já usa todo mês.',
     },
   ],
 }
 
 export const moment = {
-  headline: 'O MOMENTO QUE MUDA TUDO.',
+  headline: 'A primeira vez que você vê tudo junto.',
   narrative: [
     'Você conecta sua conta da B3.',
     'A tela carrega.',
-    'E pela primeira vez você vê:'
+    'E pela primeira vez você enxerga:'
   ],
   bullets: [
     'quanto tem',
@@ -153,7 +154,7 @@ export const socialProof = {
   ],
   stats: [
     { value: '+[X] mil', label: 'investidores ativos' },
-    { value: 'R$[X] milhões', label: 'acompanhados' },
+    { value: 'R$[X] milhões', label: 'acompanhados na plataforma' },
     { value: '[X]', label: 'carteiras atualizadas' },
   ],
 }
@@ -189,22 +190,22 @@ export const faq = [
   {
     question: 'A P3X tem custódia dos meus ativos?',
     answer:
-      'Não. Em hipótese nenhuma. Seus ativos continuam na sua corretora. A P3X só lê os dados via integração oficial da B3.',
+      'Não, em hipótese nenhuma. Seus ativos continuam na sua corretora. A P3X apenas lê os dados via integração oficial da B3.',
   },
   {
-    question: 'Já comprei curso e ferramenta e não usei. Por que dessa vez seria diferente?',
+    question: 'Já comprei curso e ferramenta antes e não usei. Por que dessa vez seria diferente?',
     answer:
-      'Porque a P3X não te pede para estudar antes de ver valor. No primeiro dia você conecta a B3 e já vê tudo. O valor acontece na primeira sessão.',
+      'Porque a P3X não te pede pra estudar antes de ver valor. No primeiro dia você conecta a B3 e já vê tudo organizado. O valor aparece na primeira vez que você usa, não daqui a três meses.',
   },
   {
     question: 'Sou iniciante. Vou conseguir usar?',
     answer:
-      'Sim. Os cursos partem do zero, as carteiras vêm com tese explicada, a comunidade é cheia de gente no mesmo ponto.',
+      'Sim. Os cursos partem do zero, as carteiras vêm com a tese explicada e a comunidade está cheia de gente no mesmo ponto que você.',
   },
   {
     question: 'Já tenho patrimônio relevante. Vai me servir?',
     answer:
-      'Provavelmente até mais. Quanto maior o patrimônio, mais cara fica a falta de clareza.',
+      'Provavelmente ainda mais. Quanto maior o patrimônio, mais cara fica a falta de clareza.',
   },
   {
     question: 'O preço muda quando eu renovar?',
@@ -221,7 +222,10 @@ export const faq = [
 export const closing = {
   label: 'DECISÃO',
   headline: 'VOCÊ PODE CONTINUAR NO ESCURO…',
-  subheadline: 'Ou entrar agora na P3X e finalmente enxergar seu dinheiro com clareza.',
+  subheadline: {
+    before: '…ou entrar na P3X e ',
+    highlight: 'ver seu dinheiro com clareza de uma vez.',
+  },
   checklist: [
     '7 dias de garantia',
     'R$ 597 no ano (R$ 49,75/mês)',

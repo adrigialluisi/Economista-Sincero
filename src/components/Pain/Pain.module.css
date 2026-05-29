@@ -175,21 +175,23 @@
 .revealPre {
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.1;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   color: var(--brand-dark);
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
 }
 
-.revealGreen {
+.revealMixed {
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.1;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: var(--brand-primary);
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--brand-dark);
   margin-top: 0;
+}
+
+.revealGreenInline {
+  color: var(--brand-primary);
 }

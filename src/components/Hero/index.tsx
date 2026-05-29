@@ -72,9 +72,11 @@ export default function Hero({
                 </li>
               ))}
             </ul>
-            <p className={styles.checklistHighlight} style={{ fontWeight: 'bold', fontSize: '1rem', letterSpacing: '0.05em' }}>
-              {checklistHighlight}
-            </p>
+            {checklistHighlight && (
+              <p className={styles.checklistHighlight} style={{ fontWeight: 'bold', fontSize: '1rem', letterSpacing: '0.05em' }}>
+                {checklistHighlight}
+              </p>
+            )}
           </div>
 
           <div className={styles.ctaBlock}>

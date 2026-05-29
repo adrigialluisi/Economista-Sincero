@@ -6,7 +6,22 @@ interface PainProps {
   bulletsIntro: string
   bullets: string[]
   closing: string
+  closingPre: string
   closingBold: string
+}
+
+// Renderiza texto com **palavra** como <strong>
+function BoldText({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/)
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.startsWith('**') && part.endsWith('**')
+          ? <strong key={i}>{part.slice(2, -2)}</strong>
+          : <span key={i}>{part}</span>
+      )}
+    </>
+  )
 }
 
 export default function Pain({
@@ -15,6 +30,7 @@ export default function Pain({
   bulletsIntro,
   bullets,
   closing,
+  closingPre,
   closingBold,
 }: PainProps) {
   const headlineParts = headline.split('\n')
@@ -84,7 +100,7 @@ export default function Pain({
               {bullets.map((bullet, idx) => (
                 <li key={idx} className={styles.painBox}>
                   <span className={styles.painIcon}>{questionIcon}</span>
-                  <span className={styles.painText}>{bullet}</span>
+                  <span className={styles.painText}><BoldText text={bullet} /></span>
                 </li>
               ))}
             </ul>
@@ -93,8 +109,10 @@ export default function Pain({
 
         {/* Coluna direita */}
         <div className={styles.colRight}>
-          <p className={styles.revealPre}>O problema não é falta de inteligência.</p>
-          <p className={styles.revealGreen}>É FALTA DE CLAREZA.</p>
+          <p className={styles.revealPre}>{closing}</p>
+          <p className={styles.revealMixed}>
+            {closingPre}<span className={styles.revealGreenInline}>{closingBold}</span>
+          </p>
         </div>
 
       </div>

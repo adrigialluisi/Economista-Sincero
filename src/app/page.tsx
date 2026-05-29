@@ -55,12 +55,13 @@ export default function Page() {
           authorName={author.name}
         />
         <VideoHero />
-        <Pain 
+        <Pain
           headline={pain.headline}
           narrative={pain.narrative}
           bulletsIntro={pain.bulletsIntro}
           bullets={pain.bullets}
           closing={pain.closing}
+          closingPre={pain.closingPre}
           closingBold={pain.closingBold}
         />
         <HowItWorks />
